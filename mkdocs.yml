@@ -1,8 +1,9 @@
-site_name: Agile
+site_name: "Artificial Intelligence"
 pages:
 - "Home": 'index.md'
-- "Team": 'team.md'
-- "Artifacts": 'artifacts.md'
-- "Meetings": 'meetings.md'
+- "Autonomous Agents": "autonomous_agents.md"
+- "Cellular Automator": "cellular_automator.md"
+- "Fractal": "fractal.md"
+- "The Pac-Man Projects": "pacman.md"
 markdown_extensions:
     - footnotes

@@ -4,31 +4,39 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-07-06</lastmod>
+     <lastmod>2016-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/team/</loc>
-     <lastmod>2016-07-06</lastmod>
+     <loc>None/autonomous_agents/</loc>
+     <lastmod>2016-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/artifacts/</loc>
-     <lastmod>2016-07-06</lastmod>
+     <loc>None/cellular_automator/</loc>
+     <lastmod>2016-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>None/meetings/</loc>
-     <lastmod>2016-07-06</lastmod>
+     <loc>None/fractal/</loc>
+     <lastmod>2016-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/pacman/</loc>
+     <lastmod>2016-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

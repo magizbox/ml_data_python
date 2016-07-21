@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Artificial Intelligence</title>
+	<title>Autonomous Agents - Artificial Intelligence</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">Artificial Intelligence</a>
+            <a class="navbar-brand" href="..">Artificial Intelligence</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -54,31 +54,31 @@
                 
                 
                     <li >
-                        <a href=".">Home</a>
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Autonomous Agents</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="autonomous_agents/">Autonomous Agents</a>
+                        <a href="../cellular_automator/">Cellular Automator</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="cellular_automator/">Cellular Automator</a>
+                        <a href="../fractal/">Fractal</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="fractal/">Fractal</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="pacman/">The Pac-Man Projects</a>
+                        <a href="../pacman/">The Pac-Man Projects</a>
                     </li>
                 
                 
@@ -92,13 +92,13 @@
                     </a>
                 </li>
                 
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="..">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../cellular_automator/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -111,15 +111,60 @@
 
         <div class="container">
             
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#autonomous-agents">Autonomous Agents</a></li>
+        
+    
+        <li class="main "><a href="#steering-behavior-1-2">Steering Behavior 1 2</a></li>
+        
+            <li><a href="#seek">Seek</a></li>
+        
+            <li><a href="#flow-filed-following">Flow Filed Following</a></li>
+        
+            <li><a href="#path-following">Path Following</a></li>
+        
+            <li><a href="#group-steering">Group Steering</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
-    </div>
-
-
+<h1 id="autonomous-agents">Autonomous Agents</h1>
+<p>Autonomous Agents</p>
+<ul>
+<li>limited ability to perceive its environment</li>
+<li>process the environment and calculate an action</li>
+<li>no global plan / leader</li>
+</ul>
+<p>Vehicles</p>
+<ul>
+<li>Action / Selection</li>
+<li>Steering</li>
+<li>Locomotion</li>
+</ul>
+<h1 id="steering-behavior-1-2">Steering Behavior <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> <sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup></h1>
+<p><img alt="" src="http://image.slidesharecdn.com/3amigasp4rosariodechiara-090617074356-phpapp02/95/massive-battle-coordinated-movement-of-autonomous-agents-14-728.jpg?cb=1245224659" /></p>
+<p>Steering = Desired - Velocity</p>
+<h2 id="seek">Seek</h2>
+<h2 id="flow-filed-following">Flow Filed Following</h2>
+<h2 id="path-following">Path Following</h2>
+<h2 id="group-steering">Group Steering</h2>
+<p>https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp06_agents\</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="http://www.slideshare.net/huerst/massive-battle-coordinated-movement-of-autonomous-agents">Massive Battle: Coordinated Movement of Autonomous Agents</a>&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Craig Reynolds, <a href="http://www.red3d.com/cwr/steer/">Steering Behaviors For Autonomous Characters</a>&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+            
         </div>
 
         <footer class="col-md-12">
@@ -128,12 +173,12 @@
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
