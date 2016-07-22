@@ -2,73 +2,113 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Artificial Intelligence\n\n\n\n\nArtificial intelligence (AI) is the intelligence exhibited by machines or software. It is also the name of the academic field of study which studies how to create computers and computer software that are capable of intelligent behavior. Major AI researchers and textbooks define this field as \"the study and design of intelligent agents\", in which an intelligent agent is a system that perceives its environment and takes actions that maximize its chances of success. John McCarthy, who coined the term in 1955, defines it as \"the science and engineering of making intelligent machines\".", 
+            "text": "DataScience with Python\n\n\nTools\n\n\n\n\npandas\n\n\nsklearn\n\n\n\n\nTable of contents\n\n\n\n\nData IO\n\n\nData Preparation\n\n\nData Transformation\n\n\nExplore Data Analysis\n\n\n\n\nInstallation\n\n\nUbuntu\n\n\n# install pip\nsudo apt-get install python-pip\n# numpy scipy notebook\nsudo apt-get install python-numpy python-scipy python-matplotlib python-pandas python-sympy python-nose\n# scikit-learn\npip install jupyter ipython\npip install -U scikit-learn", 
             "title": "Home"
         }, 
         {
-            "location": "/#artificial-intelligence", 
-            "text": "Artificial intelligence (AI) is the intelligence exhibited by machines or software. It is also the name of the academic field of study which studies how to create computers and computer software that are capable of intelligent behavior. Major AI researchers and textbooks define this field as \"the study and design of intelligent agents\", in which an intelligent agent is a system that perceives its environment and takes actions that maximize its chances of success. John McCarthy, who coined the term in 1955, defines it as \"the science and engineering of making intelligent machines\".", 
-            "title": "Artificial Intelligence"
-        }, 
-        {
-            "location": "/autonomous_agents/", 
-            "text": "Autonomous Agents\n\n\nAutonomous Agents\n\n\n\n\nlimited ability to perceive its environment\n\n\nprocess the environment and calculate an action\n\n\nno global plan / leader\n\n\n\n\nVehicles\n\n\n\n\nAction / Selection\n\n\nSteering\n\n\nLocomotion\n\n\n\n\nSteering Behavior \n1\n \n2\n\n\n\n\nSteering = Desired - Velocity\n\n\nSeek\n\n\nFlow Filed Following\n\n\nPath Following\n\n\nGroup Steering\n\n\nhttps://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp06_agents\\\n\n\n\n\n\n\n\n\n\n\nMassive Battle: Coordinated Movement of Autonomous Agents\n\n\n\n\n\n\nCraig Reynolds, \nSteering Behaviors For Autonomous Characters", 
-            "title": "Autonomous Agents"
-        }, 
-        {
-            "location": "/autonomous_agents/#autonomous-agents", 
-            "text": "Autonomous Agents   limited ability to perceive its environment  process the environment and calculate an action  no global plan / leader   Vehicles   Action / Selection  Steering  Locomotion", 
-            "title": "Autonomous Agents"
-        }, 
-        {
-            "location": "/autonomous_agents/#steering-behavior-1-2", 
-            "text": "Steering = Desired - Velocity", 
-            "title": "Steering Behavior 1 2"
-        }, 
-        {
-            "location": "/autonomous_agents/#seek", 
+            "location": "/#datascience-with-python", 
             "text": "", 
-            "title": "Seek"
+            "title": "DataScience with Python"
         }, 
         {
-            "location": "/autonomous_agents/#flow-filed-following", 
+            "location": "/#tools", 
+            "text": "pandas  sklearn", 
+            "title": "Tools"
+        }, 
+        {
+            "location": "/#table-of-contents", 
+            "text": "Data IO  Data Preparation  Data Transformation  Explore Data Analysis", 
+            "title": "Table of contents"
+        }, 
+        {
+            "location": "/#installation", 
             "text": "", 
-            "title": "Flow Filed Following"
+            "title": "Installation"
         }, 
         {
-            "location": "/autonomous_agents/#path-following", 
+            "location": "/#ubuntu", 
+            "text": "# install pip\nsudo apt-get install python-pip\n# numpy scipy notebook\nsudo apt-get install python-numpy python-scipy python-matplotlib python-pandas python-sympy python-nose\n# scikit-learn\npip install jupyter ipython\npip install -U scikit-learn", 
+            "title": "Ubuntu"
+        }, 
+        {
+            "location": "/io/", 
+            "text": "Data IO\n\n\nThis post shows how to import data to Python from numerous resources\n\n\nCSV\n\n\nRead a csv file from local or from a server\n\n\nimport numpy as np\nimport pandas as pd\n# read data\ndf = pd.read_csv('data.csv', header = 0)\n# write data\ndf.to_csv('data.csv', header=1, index=False)\n\n\n\n\nExcel\n\n\nref \n1\n\n\nimport pandas as pd\n# read data\ndf = pd.read_excel('data.xls')\n\n\n\n\nSqlite\n\n\nref \n2\n \n3\n\n\nimport sqlite3\n\nDB_NAME = \ndb.sqlite3\n\nSELECT_QUERY = \nSELECT page_id, type FROM service_page\n\n# connect to sqlite3\ndb_connector = sqlite3.connect(DB_NAME)\n# excute query\ncursor = db_connector.execute(SELECT_QUERY)\n# return dataset\ndata_set = cursor.fetchall()\n\n\n\n\n\n\n\n\n\n\n\n\npandas.read_excel\n\n\n\n\n\n\npandas.read_sqlite\n\n\n\n\n\n\nsqlite3.read_sqlite", 
+            "title": "IO"
+        }, 
+        {
+            "location": "/io/#data-io", 
+            "text": "This post shows how to import data to Python from numerous resources", 
+            "title": "Data IO"
+        }, 
+        {
+            "location": "/io/#csv", 
+            "text": "Read a csv file from local or from a server  import numpy as np\nimport pandas as pd\n# read data\ndf = pd.read_csv('data.csv', header = 0)\n# write data\ndf.to_csv('data.csv', header=1, index=False)", 
+            "title": "CSV"
+        }, 
+        {
+            "location": "/io/#excel", 
+            "text": "ref  1  import pandas as pd\n# read data\ndf = pd.read_excel('data.xls')", 
+            "title": "Excel"
+        }, 
+        {
+            "location": "/io/#sqlite", 
+            "text": "ref  2   3  import sqlite3\n\nDB_NAME =  db.sqlite3 \nSELECT_QUERY =  SELECT page_id, type FROM service_page \n# connect to sqlite3\ndb_connector = sqlite3.connect(DB_NAME)\n# excute query\ncursor = db_connector.execute(SELECT_QUERY)\n# return dataset\ndata_set = cursor.fetchall()      pandas.read_excel    pandas.read_sqlite    sqlite3.read_sqlite", 
+            "title": "Sqlite"
+        }, 
+        {
+            "location": "/preparation/", 
+            "text": "Preperation\n\n\nNormalization\n\n\nref \n1\n\n\nimport numpy\nfrom sklearn.preprocessing import normalize\nmatrix = numpy.arange(0,27,3).reshape(3,3).astype(numpy.float64)\n\n# array([[  0.,   3.,   6.],\n#   [  9.,  12.,  15.],\n#   [ 18.,  21.,  24.]])\n\nnormed_matrix = normalize(matrix, axis=1, norm='l1')\n\n# [[ 0.          0.33333333  0.66666667]\n# [ 0.25        0.33333333  0.41666667]\n# [ 0.28571429  0.33333333  0.38095238]]\n\n\n\n\nLabel Encoder\n\n\nref \n2\n\n\nEncode labels (categorical variables) with value between 0 and n_classes-1.\n\n\nimport sklearn\nle = sklearn.preprocessing.LabelEncoder()\nle.fit([\nparis\n, \nparis\n, \ntokyo\n, \namsterdam\n])\n# LabelEncoder()\nlist(le.classes_)\n# ['amsterdam', 'paris', 'tokyo']\nle.transform([\ntokyo\n, \ntokyo\n, \nparis\n])\n# array([2, 2, 1]...)\nlist(le.inverse_transform([2, 2, 1]))\n# ['tokyo', 'tokyo', 'paris']\n\n\n\n\n\n\n\n\n\n\n\n\nHow to normalize a 2-dimensional numpy array in python less verbose?\n\n\n\n\n\n\nsklearn.preprocessing.LabelEncoder", 
+            "title": "Preparation"
+        }, 
+        {
+            "location": "/preparation/#preperation", 
             "text": "", 
-            "title": "Path Following"
+            "title": "Preperation"
         }, 
         {
-            "location": "/autonomous_agents/#group-steering", 
-            "text": "https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp06_agents\\      Massive Battle: Coordinated Movement of Autonomous Agents    Craig Reynolds,  Steering Behaviors For Autonomous Characters", 
-            "title": "Group Steering"
+            "location": "/preparation/#normalization", 
+            "text": "ref  1  import numpy\nfrom sklearn.preprocessing import normalize\nmatrix = numpy.arange(0,27,3).reshape(3,3).astype(numpy.float64)\n\n# array([[  0.,   3.,   6.],\n#   [  9.,  12.,  15.],\n#   [ 18.,  21.,  24.]])\n\nnormed_matrix = normalize(matrix, axis=1, norm='l1')\n\n# [[ 0.          0.33333333  0.66666667]\n# [ 0.25        0.33333333  0.41666667]\n# [ 0.28571429  0.33333333  0.38095238]]", 
+            "title": "Normalization"
         }, 
         {
-            "location": "/cellular_automator/", 
-            "text": "Cellular Automator\n\n\nhttps://www.youtube.com/watch?v=DKGodqDs9sA\nindex=1\nlist=PLRqwX-V7Uu6YrWXvEQFOGbCt6cX83Xunm\n\n\nCellular Automata\n\n\n\n\nGrid of cell\n\n\nEach cell has state, neighborhood\n\n\ncell state at time t defined by a function of neighborhood states at time t-1\n\n\n\n\nElementary Cellular Automata", 
-            "title": "Cellular Automator"
+            "location": "/preparation/#label-encoder", 
+            "text": "ref  2  Encode labels (categorical variables) with value between 0 and n_classes-1.  import sklearn\nle = sklearn.preprocessing.LabelEncoder()\nle.fit([ paris ,  paris ,  tokyo ,  amsterdam ])\n# LabelEncoder()\nlist(le.classes_)\n# ['amsterdam', 'paris', 'tokyo']\nle.transform([ tokyo ,  tokyo ,  paris ])\n# array([2, 2, 1]...)\nlist(le.inverse_transform([2, 2, 1]))\n# ['tokyo', 'tokyo', 'paris']      How to normalize a 2-dimensional numpy array in python less verbose?    sklearn.preprocessing.LabelEncoder", 
+            "title": "Label Encoder"
         }, 
         {
-            "location": "/cellular_automator/#cellular-automator", 
-            "text": "https://www.youtube.com/watch?v=DKGodqDs9sA index=1 list=PLRqwX-V7Uu6YrWXvEQFOGbCt6cX83Xunm  Cellular Automata   Grid of cell  Each cell has state, neighborhood  cell state at time t defined by a function of neighborhood states at time t-1   Elementary Cellular Automata", 
-            "title": "Cellular Automator"
+            "location": "/transformation/", 
+            "text": "Transformation\n\n\nCreate data frame\n\n\nref \n1\n\n\nimport pandas as pd\nstudents = pd.DataFrame({\n  'name' : [\nKate\n, \nJohn\n, \nTom\n, \nMark\n],\n  'age' : [20, 21, 19, 18]})\n\n#       age  name\n#    0   20  Kate\n#    1   21  John\n#    2   19   Tom\n#    3   18  Mark\n\n\n\n\nLoad dataframe\n\n\nimport pandas as pd\nfrom sklearn import datasets\niris_data = datasets.load_iris()\niris = pd.DataFrame(data=iris_data.data, columns=iris_data.feature_names)\niris\n\n\n\n\nSelection\n\n\nstudents.iloc[1:3, :]\n#       age  name\n#    1   21  John\n#    2   19   Tom\n\n\n\n\nCreate new column\n\n\nstudents[\nbirthyear\n] = students.apply(lambda row: 2016 - row['age'], axis=1)\nstudents[\nbirthyear\n] = 2016 - students[\nage\n]\n\n#       age  name  birthyear\n#    0   20  Kate       1996\n#    1   21  John       1995\n#    2   19   Tom       1997\n#    3   18  Mark       1998\n\n\n\n\nDelete column\n\n\nstudents = students.drop('birthyear', 1)\n\n\n\n\n\n\nWes McKinney, 10-minute tour of pandas: \nvideo\n, \nnotebook\n\n\n\n\n\n\n\n\n\n\n\n\nDataFrame, Intro to Data Structures", 
+            "title": "Transformation"
         }, 
         {
-            "location": "/fractal/", 
-            "text": "Fractal\n\n\n\n\nL-System", 
-            "title": "Fractal"
+            "location": "/transformation/#transformation", 
+            "text": "", 
+            "title": "Transformation"
         }, 
         {
-            "location": "/pacman/", 
-            "text": "The Pac-Man Projects\n\n\nToday I found an interesting AI project - \nThe Pac-Man\n\n\n\n\nHere is the project overview\n\n\nThe Pac-Man projects\n were developed for UC Berkeley's introductory artificial intelligence course, CS 188. They apply an array of AI techniques to playing Pac-Man. However, these projects don't focus on building AI for video games. Instead, they teach foundational AI concepts, such as \ninformed state-space search\n, \nprobabilistic inference\n, and \nreinforcement learning\n. These concepts underly real-world application areas such as natural language processing, computer vision, and robotics.\n\nWe designed these projects with three goals in mind. The projects allow students to\n visualize the results of the techniques\n they implement. They also contain code examples and clear directions, but do not force students to wade through undue amounts of scaffolding. Finally, Pac-Man provides a challenging problem environment that demands creative solutions; real-world AI problems are challenging, and Pac-Man is too.\n\nIn our course, these projects have boosted enrollment, teaching reviews, and student engagement. The projects have been field-tested, refined, and debugged over multiple semesters at Berkeley. We are now happy to release them to other universities for educational use.\n\n\n\nIn the next part of this post, I will show my works on this project\n\n\nProject 1: Search in Pacman\n\n\n[caption id=\"\" align=\"alignleft\" width=\"231\"]\n DFS[/caption]\n\n\n[caption id=\"\" align=\"alignleft\" width=\"233\"]\n BFS[/caption]", 
-            "title": "The Pac-Man Projects"
+            "location": "/transformation/#create-data-frame", 
+            "text": "ref  1  import pandas as pd\nstudents = pd.DataFrame({\n  'name' : [ Kate ,  John ,  Tom ,  Mark ],\n  'age' : [20, 21, 19, 18]})\n\n#       age  name\n#    0   20  Kate\n#    1   21  John\n#    2   19   Tom\n#    3   18  Mark", 
+            "title": "Create data frame"
         }, 
         {
-            "location": "/pacman/#the-pac-man-projects", 
-            "text": "Today I found an interesting AI project -  The Pac-Man   Here is the project overview  The Pac-Man projects  were developed for UC Berkeley's introductory artificial intelligence course, CS 188. They apply an array of AI techniques to playing Pac-Man. However, these projects don't focus on building AI for video games. Instead, they teach foundational AI concepts, such as  informed state-space search ,  probabilistic inference , and  reinforcement learning . These concepts underly real-world application areas such as natural language processing, computer vision, and robotics.\n\nWe designed these projects with three goals in mind. The projects allow students to  visualize the results of the techniques  they implement. They also contain code examples and clear directions, but do not force students to wade through undue amounts of scaffolding. Finally, Pac-Man provides a challenging problem environment that demands creative solutions; real-world AI problems are challenging, and Pac-Man is too.\n\nIn our course, these projects have boosted enrollment, teaching reviews, and student engagement. The projects have been field-tested, refined, and debugged over multiple semesters at Berkeley. We are now happy to release them to other universities for educational use.  In the next part of this post, I will show my works on this project  Project 1: Search in Pacman  [caption id=\"\" align=\"alignleft\" width=\"231\"]  DFS[/caption]  [caption id=\"\" align=\"alignleft\" width=\"233\"]  BFS[/caption]", 
-            "title": "The Pac-Man Projects"
+            "location": "/transformation/#load-dataframe", 
+            "text": "import pandas as pd\nfrom sklearn import datasets\niris_data = datasets.load_iris()\niris = pd.DataFrame(data=iris_data.data, columns=iris_data.feature_names)\niris", 
+            "title": "Load dataframe"
+        }, 
+        {
+            "location": "/transformation/#selection", 
+            "text": "students.iloc[1:3, :]\n#       age  name\n#    1   21  John\n#    2   19   Tom", 
+            "title": "Selection"
+        }, 
+        {
+            "location": "/transformation/#create-new-column", 
+            "text": "students[ birthyear ] = students.apply(lambda row: 2016 - row['age'], axis=1)\nstudents[ birthyear ] = 2016 - students[ age ]\n\n#       age  name  birthyear\n#    0   20  Kate       1996\n#    1   21  John       1995\n#    2   19   Tom       1997\n#    3   18  Mark       1998", 
+            "title": "Create new column"
+        }, 
+        {
+            "location": "/transformation/#delete-column", 
+            "text": "students = students.drop('birthyear', 1)   Wes McKinney, 10-minute tour of pandas:  video ,  notebook       DataFrame, Intro to Data Structures", 
+            "title": "Delete column"
         }
     ]
 }

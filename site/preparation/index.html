@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>The Pac-Man Projects - Artificial Intelligence</title>
+	<title>Preparation - DataScience with Python</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
@@ -43,7 +43,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href="..">Artificial Intelligence</a>
+            <a class="navbar-brand" href="..">DataScience with Python</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -60,25 +60,19 @@
                 
                 
                     <li >
-                        <a href="../autonomous_agents/">Autonomous Agents</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../cellular_automator/">Cellular Automator</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="../fractal/">Fractal</a>
+                        <a href="../io/">IO</a>
                     </li>
                 
                 
                 
                     <li class="active">
-                        <a href="./">The Pac-Man Projects</a>
+                        <a href="./">Preparation</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../transformation/">Transformation</a>
                     </li>
                 
                 
@@ -93,12 +87,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../fractal/">
+                        <a rel="next" href="../io/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../transformation/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -114,27 +108,61 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#the-pac-man-projects">The Pac-Man Projects</a></li>
+        <li class="main active"><a href="#preperation">Preperation</a></li>
+        
+            <li><a href="#normalization">Normalization</a></li>
+        
+            <li><a href="#label-encoder">Label Encoder</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="the-pac-man-projects">The Pac-Man Projects</h1>
-<p>Today I found an interesting AI project - <a href="http://ai.berkeley.edu/project_overview.html" target="_blank">The Pac-Man</a></p>
-<p><img src="http://ai.berkeley.edu/images/pacman_game.gif" alt="http://ai.berkeley.edu/images/pacman_game.gif" /></p>
-<p>Here is the project overview</p>
-<blockquote><strong>The Pac-Man projects</strong> were developed for UC Berkeley's introductory artificial intelligence course, CS 188. They apply an array of AI techniques to playing Pac-Man. However, these projects don't focus on building AI for video games. Instead, they teach foundational AI concepts, such as <strong>informed state-space search</strong>, <strong>probabilistic inference</strong>, and <strong>reinforcement learning</strong>. These concepts underly real-world application areas such as natural language processing, computer vision, and robotics.
+<h1 id="preperation">Preperation</h1>
+<h2 id="normalization">Normalization</h2>
+<p>ref <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></p>
+<pre><code class="python">import numpy
+from sklearn.preprocessing import normalize
+matrix = numpy.arange(0,27,3).reshape(3,3).astype(numpy.float64)
 
-We designed these projects with three goals in mind. The projects allow students to<strong> visualize the results of the techniques</strong> they implement. They also contain code examples and clear directions, but do not force students to wade through undue amounts of scaffolding. Finally, Pac-Man provides a challenging problem environment that demands creative solutions; real-world AI problems are challenging, and Pac-Man is too.
+# array([[  0.,   3.,   6.],
+#   [  9.,  12.,  15.],
+#   [ 18.,  21.,  24.]])
 
-In our course, these projects have boosted enrollment, teaching reviews, and student engagement. The projects have been field-tested, refined, and debugged over multiple semesters at Berkeley. We are now happy to release them to other universities for educational use.</blockquote>
+normed_matrix = normalize(matrix, axis=1, norm='l1')
 
-<p>In the next part of this post, I will show my works on this project</p>
-<p><strong>Project 1: Search in Pacman</strong></p>
-<p>[caption id="" align="alignleft" width="231"]<img src="https://lh3.googleusercontent.com/SLvsowYbJNgMCKJCMsRgKL711h29Tr-QaEHibhuDg4Y=w572-h607-no" alt="" width="231" height="245" /> DFS[/caption]</p>
-<p>[caption id="" align="alignleft" width="233"]<img class="" src="https://lh3.googleusercontent.com/Uj0XWC5J7vimb2pIMRMbK2f0ZAngRXRB0vDtfvXPOyA=w572-h607-no" alt="" width="233" height="247" /> BFS[/caption]</p></div>
+# [[ 0.          0.33333333  0.66666667]
+# [ 0.25        0.33333333  0.41666667]
+# [ 0.28571429  0.33333333  0.38095238]]
+</code></pre>
+
+<h2 id="label-encoder">Label Encoder</h2>
+<p>ref <sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup></p>
+<p>Encode labels (categorical variables) with value between 0 and n_classes-1.</p>
+<pre><code class="python">import sklearn
+le = sklearn.preprocessing.LabelEncoder()
+le.fit([&quot;paris&quot;, &quot;paris&quot;, &quot;tokyo&quot;, &quot;amsterdam&quot;])
+# LabelEncoder()
+list(le.classes_)
+# ['amsterdam', 'paris', 'tokyo']
+le.transform([&quot;tokyo&quot;, &quot;tokyo&quot;, &quot;paris&quot;])
+# array([2, 2, 1]...)
+list(le.inverse_transform([2, 2, 1]))
+# ['tokyo', 'tokyo', 'paris']
+</code></pre>
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="http://stackoverflow.com/questions/8904694/how-to-normalize-a-2-dimensional-numpy-array-in-python-less-verbose">How to normalize a 2-dimensional numpy array in python less verbose?</a>&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html">sklearn.preprocessing.LabelEncoder</a>&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
             
         </div>
 

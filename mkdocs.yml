@@ -1,9 +1,8 @@
-site_name: "Artificial Intelligence"
+site_name: "DataScience with Python"
 pages:
 - "Home": 'index.md'
-- "Autonomous Agents": "autonomous_agents.md"
-- "Cellular Automator": "cellular_automator.md"
-- "Fractal": "fractal.md"
-- "The Pac-Man Projects": "pacman.md"
+- "IO": 'io.md'
+- "Preparation": 'preparation.md'
+- "Transformation": 'transformation.md'
 markdown_extensions:
     - footnotes
