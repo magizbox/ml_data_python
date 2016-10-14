@@ -2,7 +2,7 @@
 
 ## Normalization
 
-ref [^1]
+Example [^1]
 
 ```python
 import numpy
@@ -22,9 +22,7 @@ normed_matrix = normalize(matrix, axis=1, norm='l1')
 
 ## Label Encoder
 
-ref [^2]
-
-Encode labels (categorical variables) with value between 0 and n_classes-1.
+Encode labels (categorical variables) with value between 0 and n_classes-1. [^2]
 
 ```python
 import sklearn

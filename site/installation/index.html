@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Preparation - DataScience with Python</title>
+	<title>Installation - DataScience with Python</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
@@ -74,13 +74,13 @@
                 
                 
                 
-                    <li >
-                        <a href="../installation/">Installation</a>
+                    <li class="active">
+                        <a href="./">Installation</a>
                     </li>
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Docs <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -91,8 +91,8 @@
 
                         
                             
-<li class="active">
-    <a href="./">Preparation</a>
+<li >
+    <a href="../preparation/">Preparation</a>
 </li>
 
                         
@@ -117,12 +117,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../io/">
+                        <a rel="next" href="..">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../transformation/">
+                        <a rel="prev" href="../io/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -138,60 +138,26 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#preperation">Preperation</a></li>
+        <li class="main active"><a href="#installation">Installation</a></li>
         
-            <li><a href="#normalization">Normalization</a></li>
-        
-            <li><a href="#label-encoder">Label Encoder</a></li>
+    
+        <li class="main "><a href="#ubuntu">Ubuntu</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="preperation">Preperation</h1>
-<h2 id="normalization">Normalization</h2>
-<p>Example <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></p>
-<pre><code class="python">import numpy
-from sklearn.preprocessing import normalize
-matrix = numpy.arange(0,27,3).reshape(3,3).astype(numpy.float64)
-
-# array([[  0.,   3.,   6.],
-#   [  9.,  12.,  15.],
-#   [ 18.,  21.,  24.]])
-
-normed_matrix = normalize(matrix, axis=1, norm='l1')
-
-# [[ 0.          0.33333333  0.66666667]
-# [ 0.25        0.33333333  0.41666667]
-# [ 0.28571429  0.33333333  0.38095238]]
-</code></pre>
-
-<h2 id="label-encoder">Label Encoder</h2>
-<p>Encode labels (categorical variables) with value between 0 and n_classes-1. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup></p>
-<pre><code class="python">import sklearn
-le = sklearn.preprocessing.LabelEncoder()
-le.fit([&quot;paris&quot;, &quot;paris&quot;, &quot;tokyo&quot;, &quot;amsterdam&quot;])
-# LabelEncoder()
-list(le.classes_)
-# ['amsterdam', 'paris', 'tokyo']
-le.transform([&quot;tokyo&quot;, &quot;tokyo&quot;, &quot;paris&quot;])
-# array([2, 2, 1]...)
-list(le.inverse_transform([2, 2, 1]))
-# ['tokyo', 'tokyo', 'paris']
-</code></pre>
-
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p><a href="http://stackoverflow.com/questions/8904694/how-to-normalize-a-2-dimensional-numpy-array-in-python-less-verbose">How to normalize a 2-dimensional numpy array in python less verbose?</a>&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html">sklearn.preprocessing.LabelEncoder</a>&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div></div>
+<h2 id="installation">Installation</h2>
+<h2 id="ubuntu">Ubuntu</h2>
+<pre><code># install pip
+sudo apt-get install python-pip
+# numpy scipy notebook
+sudo apt-get install python-numpy python-scipy python-matplotlib python-pandas python-sympy python-nose
+# scikit-learn
+pip install jupyter ipython
+pip install -U scikit-learn
+</code></pre></div>
             
         </div>
 

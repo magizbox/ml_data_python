@@ -11,26 +11,32 @@
 
     
     <url>
-     <loc>None/io/</loc>
+     <loc>None/installation/</loc>
      <lastmod>2016-10-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
+    <url>
+     <loc>None/io/</loc>
+     <lastmod>2016-10-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     <url>
      <loc>None/preparation/</loc>
      <lastmod>2016-10-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/transformation/</loc>
      <lastmod>2016-10-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
 </urlset>
