@@ -32,27 +32,27 @@
         }, 
         {
             "location": "/io/", 
-            "text": "Data IO\n\n\nThis post shows how to import data to Python from numerous resources\n\n\nCSV\n\n\nRead a csv file from local or from a server\n\n\nimport numpy as np\nimport pandas as pd\n# read data\ndf = pd.read_csv('data.csv', header = 0)\n# write data\ndf.to_csv('data.csv', header=1, index=False)\n\n\n\n\nExcel\n\n\nref \n1\n\n\nimport pandas as pd\n# read data\ndf = pd.read_excel('data.xls')\n\n\n\n\nSqlite\n\n\nref \n2\n \n3\n\n\nimport sqlite3\n\nDB_NAME = \ndb.sqlite3\n\nSELECT_QUERY = \nSELECT page_id, type FROM service_page\n\n# connect to sqlite3\ndb_connector = sqlite3.connect(DB_NAME)\n# excute query\ncursor = db_connector.execute(SELECT_QUERY)\n# return dataset\ndata_set = cursor.fetchall()\n\n\n\n\n\n\n\n\n\n\n\n\npandas.read_excel\n\n\n\n\n\n\npandas.read_sqlite\n\n\n\n\n\n\nsqlite3.read_sqlite", 
+            "text": "Data IO\n\n\nThis post shows how to import data to Python from numerous resources \n1\n \n2\n \n3\n\n\nCSV\n\n\nRead a csv file from local or from a server\n\n\nimport numpy as np\nimport pandas as pd\n# read data\ndf = pd.read_csv(\ndata.csv\n, header = 0)\n# write data\ndf.to_csv(\ndata.csv\n, header=1, index=False)\n\n\n\n\nExcel\n\n\nimport pandas as pd\n# read data\ndf = pd.read_excel(\ndata.xls\n)\n# write data\ndf = pd.to_excel(\ndata.xls\n, index=False)\n\n\n\n\nSqlite\n\n\nimport sqlite3\n\nDB_NAME = \ndb.sqlite3\n\nSELECT_QUERY = \nSELECT page_id, type FROM service_page\n\n# connect to sqlite3\ndb_connector = sqlite3.connect(DB_NAME)\n# excute query\ncursor = db_connector.execute(SELECT_QUERY)\n# return dataset\ndata_set = cursor.fetchall()\n\n\n\n\n\n\n\n\n\n\n\n\npandas.read_excel\n\n\n\n\n\n\npandas.read_sqlite\n\n\n\n\n\n\nsqlite3.read_sqlite", 
             "title": "IO"
         }, 
         {
             "location": "/io/#data-io", 
-            "text": "This post shows how to import data to Python from numerous resources", 
+            "text": "This post shows how to import data to Python from numerous resources  1   2   3", 
             "title": "Data IO"
         }, 
         {
             "location": "/io/#csv", 
-            "text": "Read a csv file from local or from a server  import numpy as np\nimport pandas as pd\n# read data\ndf = pd.read_csv('data.csv', header = 0)\n# write data\ndf.to_csv('data.csv', header=1, index=False)", 
+            "text": "Read a csv file from local or from a server  import numpy as np\nimport pandas as pd\n# read data\ndf = pd.read_csv( data.csv , header = 0)\n# write data\ndf.to_csv( data.csv , header=1, index=False)", 
             "title": "CSV"
         }, 
         {
             "location": "/io/#excel", 
-            "text": "ref  1  import pandas as pd\n# read data\ndf = pd.read_excel('data.xls')", 
+            "text": "import pandas as pd\n# read data\ndf = pd.read_excel( data.xls )\n# write data\ndf = pd.to_excel( data.xls , index=False)", 
             "title": "Excel"
         }, 
         {
             "location": "/io/#sqlite", 
-            "text": "ref  2   3  import sqlite3\n\nDB_NAME =  db.sqlite3 \nSELECT_QUERY =  SELECT page_id, type FROM service_page \n# connect to sqlite3\ndb_connector = sqlite3.connect(DB_NAME)\n# excute query\ncursor = db_connector.execute(SELECT_QUERY)\n# return dataset\ndata_set = cursor.fetchall()      pandas.read_excel    pandas.read_sqlite    sqlite3.read_sqlite", 
+            "text": "import sqlite3\n\nDB_NAME =  db.sqlite3 \nSELECT_QUERY =  SELECT page_id, type FROM service_page \n# connect to sqlite3\ndb_connector = sqlite3.connect(DB_NAME)\n# excute query\ncursor = db_connector.execute(SELECT_QUERY)\n# return dataset\ndata_set = cursor.fetchall()      pandas.read_excel    pandas.read_sqlite    sqlite3.read_sqlite", 
             "title": "Sqlite"
         }, 
         {

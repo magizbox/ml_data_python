@@ -1,6 +1,6 @@
 # Data IO
 
-This post shows how to import data to Python from numerous resources
+This post shows how to import data to Python from numerous resources [^1] [^2] [^3]
 
 ## CSV
 
@@ -10,24 +10,22 @@ Read a csv file from local or from a server
 import numpy as np
 import pandas as pd
 # read data
-df = pd.read_csv('data.csv', header = 0)
+df = pd.read_csv("data.csv", header = 0)
 # write data
-df.to_csv('data.csv', header=1, index=False)
+df.to_csv("data.csv", header=1, index=False)
 ```
 
 ## Excel
 
-ref [^1]
-
 ```python
 import pandas as pd
 # read data
-df = pd.read_excel('data.xls')
+df = pd.read_excel("data.xls")
+# write data
+df = pd.to_excel("data.xls", index=False)
 ```
 
 ## Sqlite
-
-ref [^2] [^3]
 
 ```python
 import sqlite3

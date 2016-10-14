@@ -1,8 +1,30 @@
 site_name: "DataScience with Python"
+site_author: "Vu Anh"
+google_analytics: ['UA-68978617-1', 'magizbox.com']
+
 pages:
 - "Home": 'index.md'
 - "IO": 'io.md'
 - "Preparation": 'preparation.md'
 - "Transformation": 'transformation.md'
+
 markdown_extensions:
     - footnotes
+
+extra_css:
+  - components/magiz-c-book/src/book.css
+  - components/magiz-c-course/src/course.css
+  - components/magiz-c-video/src/video.css
+  - components/magiz-c-benchmark/src/benchmark.css
+  - components/magiz-c-paper/src/paper.css
+
+extra_javascript:
+  - js/underscore.js
+  - js/gspreadsheet.js
+  - components/magiz-c-paper/src/paper.js
+  - components/magiz-c-course/src/course.js
+  - components/magiz-c-benchmark/src/benchmark.js
+  - components/magiz-c-benchmark/src/bootstrap-popup.js
+  - components/magiz-c-book/src/book.js
+  - components/magiz-c-video/src/video.js
+
