@@ -2,13 +2,18 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Data Science with Python\n\n\n\n\nThe ability to analyze data with Python is critical in data science. Learn the basics, and move on to create stunning visualizations.\n\n\nPython is a very powerful programming language used for many different applications. Over time, the huge community around this open source language has created quite a few tools to efficiently work with Python. In recent years, a number of tools have been built specifically for data science. As a result, analyzing data with Python has never been easier.\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\nCourses", 
+            "text": "Data Science with Python\n\n\n\n\nThe ability to analyze data with Python is critical in data science. Learn the basics, and move on to create stunning visualizations.\n\n\nPython is a very powerful programming language used for many different applications. Over time, the huge community around this open source language has created quite a few tools to efficiently work with Python. In recent years, a number of tools have been built specifically for data science. As a result, analyzing data with Python has never been easier.\n\n\n\n\nLatest Posts\n\n\n(06/06/2017) \nPandas Cheatsheet\n\n\npandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.\n\n\n(01/06/2017) \nNumpy cheatsheet\n\n\nNumPy is a Python package to efficiently do data science. Learn to work with the NumPy array, a faster and more powerful alternative to the list, and take your first steps in data exploration.\n\n\n(05/12/2016) \nIO\n\n\n(12/11/2016) \nTransformation\n\n\n(12/09/2016) \nPreparation\n\n\n(01/02/2016) \nGet Started\n\n\nBooks\n\n\n\n\n\n\n\n\nCourses", 
             "title": "Home"
         }, 
         {
             "location": "/#data-science-with-python", 
             "text": "The ability to analyze data with Python is critical in data science. Learn the basics, and move on to create stunning visualizations.  Python is a very powerful programming language used for many different applications. Over time, the huge community around this open source language has created quite a few tools to efficiently work with Python. In recent years, a number of tools have been built specifically for data science. As a result, analyzing data with Python has never been easier.", 
             "title": "Data Science with Python"
+        }, 
+        {
+            "location": "/#latest-posts", 
+            "text": "(06/06/2017)  Pandas Cheatsheet  pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.  (01/06/2017)  Numpy cheatsheet  NumPy is a Python package to efficiently do data science. Learn to work with the NumPy array, a faster and more powerful alternative to the list, and take your first steps in data exploration.  (05/12/2016)  IO  (12/11/2016)  Transformation  (12/09/2016)  Preparation  (01/02/2016)  Get Started", 
+            "title": "Latest Posts"
         }, 
         {
             "location": "/#books", 
@@ -21,19 +26,214 @@
             "title": "Courses"
         }, 
         {
-            "location": "/installation/", 
-            "text": "Installation\n\n\nUbuntu\n\n\n# install pip\nsudo apt-get install python-pip\n# numpy scipy notebook\nsudo apt-get install python-numpy python-scipy python-matplotlib python-pandas python-sympy python-nose\n# scikit-learn\npip install jupyter ipython\npip install -U scikit-learn", 
-            "title": "Installation"
+            "location": "/get_started/", 
+            "text": "Get Started\n\n\nInstall essential libraries (numpy, scipy, matplotlib, pandas, scikit-learn, ipython)for data science in Ubuntu\n\n\n# install pip\nsudo apt-get install python-pip\n# numpy scipy notebook\nsudo apt-get install python-numpy python-scipy python-matplotlib python-pandas python-sympy python-nose\n# scikit-learn\npip install jupyter ipython\npip install -U scikit-learn", 
+            "title": "Get Started"
         }, 
         {
-            "location": "/installation/#installation", 
+            "location": "/get_started/#get-started", 
+            "text": "Install essential libraries (numpy, scipy, matplotlib, pandas, scikit-learn, ipython)for data science in Ubuntu  # install pip\nsudo apt-get install python-pip\n# numpy scipy notebook\nsudo apt-get install python-numpy python-scipy python-matplotlib python-pandas python-sympy python-nose\n# scikit-learn\npip install jupyter ipython\npip install -U scikit-learn", 
+            "title": "Get Started"
+        }, 
+        {
+            "location": "/pandas/", 
+            "text": "Data Wrangling\n\n\nTiny Data\n\n\nA foundation for wrangling in pandas\n\n\n\n\nSyntax", 
+            "title": "pandas"
+        }, 
+        {
+            "location": "/pandas/#data-wrangling", 
             "text": "", 
-            "title": "Installation"
+            "title": "Data Wrangling"
         }, 
         {
-            "location": "/installation/#ubuntu", 
-            "text": "# install pip\nsudo apt-get install python-pip\n# numpy scipy notebook\nsudo apt-get install python-numpy python-scipy python-matplotlib python-pandas python-sympy python-nose\n# scikit-learn\npip install jupyter ipython\npip install -U scikit-learn", 
-            "title": "Ubuntu"
+            "location": "/pandas/#tiny-data", 
+            "text": "A foundation for wrangling in pandas", 
+            "title": "Tiny Data"
+        }, 
+        {
+            "location": "/pandas/#syntax", 
+            "text": "", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/numpy/", 
+            "text": "NumPy\n\n\nUse the following import convention:\n\n\nimport numpy as np\n\n\n\n\nCreating Arrays\n\n\na = np.array([1, 2, 3])\nb = np.array([(1.5, 2, 3), (4, 5, 6)], dtype=float)\nc = np.array([[(1.5, 2, 3), (4, 5, 6)], [(3, 2, 1), (4, 5, 6)]], dtype=float)\n\n\n\n\nInitial Placeholders\n\n\n# Create an array of zeros\nnp.zeros((3, 4))\n\n\n\n\narray([[ 0.,  0.,  0.,  0.],\n       [ 0.,  0.,  0.,  0.],\n       [ 0.,  0.,  0.,  0.]])\n\n\n\n# Create an array of ones\nnp.ones((2, 3, 4), dtype=np.int16)\n\n\n\n\narray([[[1, 1, 1, 1],\n        [1, 1, 1, 1],\n        [1, 1, 1, 1]],\n\n       [[1, 1, 1, 1],\n        [1, 1, 1, 1],\n        [1, 1, 1, 1]]], dtype=int16)\n\n\n\n# Create an array of evenly spaced values (step value)\nnp.arange(10, 25, 5)\n\n\n\n\narray([10, 15, 20])\n\n\n\n# Create an array of evenly spaced values (number of samples)\nnp.linspace(0, 2, 9)\n\n\n\n\narray([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ,  1.25,  1.5 ,  1.75,  2.  ])\n\n\n\n# Create a constant array\nnp.full((2, 2), 7)\n\n\n\n\nC:\\ProgramData\\Anaconda2\\lib\\site-packages\\numpy\\core\\numeric.py:301: FutureWarning: in the future, full((2, 2), 7) will return an array of dtype('int32')\n  format(shape, fill_value, array(fill_value).dtype), FutureWarning)\n\n\n\n\n\narray([[ 7.,  7.],\n       [ 7.,  7.]])\n\n\n\n# Create a 2x2 identity matirx\nnp.eye(2)\n\n\n\n\narray([[ 1.,  0.],\n       [ 0.,  1.]])\n\n\n\n# Create an array with random values\nnp.random.random((2, 2))\n\n\n\n\narray([[ 0.11121701,  0.12191919],\n       [ 0.61608418,  0.91899253]])\n\n\n\n# Create an empty array\nnp.empty((3, 2))\n\n\n\n\narray([[ 0.,  0.],\n       [ 0.,  0.],\n       [ 0.,  0.]])\n\n\n\nIO\n\n\nSaving \n Loading On Disk\n\n\na = np.array([(1, 2), (3, 4)])\nb = np.array([(5, 6), (7, 8)])\nnp.save('my_array', a)\nnp.savez('arrays', a, b)\nnp.load('arrays.npz')\n\n\n\n\nnumpy.lib.npyio.NpzFile at 0x5c81ac8\n\n\n\n\nSaving \n Loading Text Files\n\n\nnp.loadtxt(\nmyfile.txt\n)\n\n\n\n\narray([[ 1.,  2.,  3.],\n       [ 2.,  3.,  4.]])\n\n\n\nnp.genfromtxt(\nmy_file.csv\n, delimiter=\n,\n)\n\n\n\n\narray([[ 1.,  2.,  3.],\n       [ 4.,  5.,  6.]])\n\n\n\na = np.array([(1.5, 2, 3), (4, 5, 6)], dtype=float)\nnp.savetxt(\nmyarray.txt\n, a, delimiter=\n \n)\n\n\n\n\nData Types\n\n\n# Signed 64-bit integer types\nnp.int64\n# Stardard double-precision floating point\nnp.float32\n# Complex numbers represented by 128 floats\nnp.complex\n# Boolean type storing TRUE and FALSE values\nnp.bool\n# Python object type \nnp.object\n# Fixed-length string type\nnp.string_\n# Fixed-length unicode type\nnp.unicode_\n\n\n\n\nnumpy.unicode_\n\n\n\nInspecting Your Array\n\n\na = np.array([(1.5, 2, 3), (4, 5, 6)], dtype=float)\n\n\n\n\n# array dimensions\na.shape\n\n\n\n\n(2L, 3L)\n\n\n\n# length of array\nlen(a)\n\n\n\n\n2\n\n\n\n# number of array dimensions\na.ndim\n\n\n\n\n2\n\n\n\n# number of array elements\na.size\n\n\n\n\n6\n\n\n\n# data type of array elements\na.dtype\n\n\n\n\ndtype('float64')\n\n\n\n# name of data type\na.dtype.name\n\n\n\n\n'float64'\n\n\n\n# convert an array to a different type\na.astype(int)\n\n\n\n\narray([[1, 2, 3],\n       [4, 5, 6]])\n\n\n\nAsking For Help\n\n\nnp.info(np.ndarray.dtype)\n\n\n\n\nData-type of the array's elements.\n\nParameters\n----------\nNone\n\nReturns\n-------\nd : numpy dtype object\n\nSee Also\n--------\nnumpy.dtype\n\nExamples\n--------\n\n x\narray([[0, 1],\n       [2, 3]])\n\n x.dtype\ndtype('int32')\n\n type(x.dtype)\n\ntype 'numpy.dtype'\n\n\n\n\nArray Mathmatics\n\n\nArithmetic Operations\n\n\na = np.random.random((2, 2))\nb = np.random.random((2, 2))\n\n\n\n\n# subtraction\nnp.subtract(a, b)\na - b\n\n\n\n\narray([[-0.04906355,  0.24579184],\n       [ 0.45085259,  0.55266361]])\n\n\n\n# addition\nnp.add(b, a)\nb + a\n\n\n\n\narray([[ 0.11861634,  1.28886181],\n       [ 0.84371684,  1.37134298]])\n\n\n\n# division\nnp.divide(a, b)\na / b\n\n\n\n\narray([[ 0.41479504,  1.47128543],\n       [ 3.29520803,  2.35013443]])\n\n\n\n# multiplication\nnp.multiply(a, b)\na * b\n\n\n\n\narray([[ 0.00291565,  0.40018778],\n       [ 0.12714751,  0.39378613]])\n\n\n\n# exponentiation\nnp.exp(b)\n\n\n\n\narray([[ 1.08745483,  1.68461152],\n       [ 1.21705271,  1.50582314]])\n\n\n\n# square root\nnp.exp(b)\n\n\n\n\narray([[ 1.08745483,  1.68461152],\n       [ 1.21705271,  1.50582314]])\n\n\n\n# sines of an array\nnp.sin(a)\n\n\n\n\narray([[ 0.03476938,  0.69421365],\n       [ 0.60302258,  0.82033885]])\n\n\n\n# cosine of an array\nnp.cos(b)\n\n\n\n\narray([[ 0.99648749,  0.86705545],\n       [ 0.98076917,  0.91738383]])\n\n\n\n# natural algorithm\nnp.log(a)\n\n\n\n\narray([[-3.35881648, -0.26484246],\n       [-0.43496903, -0.03873741]])\n\n\n\n# dot product\na.dot(b)\nnp.dot(a, b)\n\n\n\n\narray([[ 0.15364329,  0.33223443],\n       [ 0.24323666,  0.73136775]])\n\n\n\nComparison\n\n\na = np.random.random((2, 2))\na\n\n\n\n\narray([[ 0.20271908,  0.83347777],\n       [ 0.61463859,  0.47298106]])\n\n\n\nb = np.random.random((2, 2))\nb\n\n\n\n\narray([[ 0.71492635,  0.48317927],\n       [ 0.83547998,  0.67228618]])\n\n\n\n# element-wise comparison\na == b \n\n\n\n\narray([[False, False],\n       [False, False]], dtype=bool)\n\n\n\n# element-wise comparison\na \n 2\n\n\n\n\narray([[ True,  True],\n       [ True,  True]], dtype=bool)\n\n\n\n# array-wise comparison\nnp.array_equal(a, b)\n\n\n\n\nFalse\n\n\n\nAggregate Functions\n\n\na = np.random.random((3, 3))\na\n\n\n\n\narray([[ 0.71770831,  0.895387  ,  0.58199526],\n       [ 0.32399079,  0.24146174,  0.59422847],\n       [ 0.9976845 ,  0.36588863,  0.67375734]])\n\n\n\n# array-wise sum\na.sum()\n\n\n\n\n5.392102026407013\n\n\n\n# array-wise minimum value\na.min()\n\n\n\n\n0.2414617386336485\n\n\n\n# maximum value of an array row\na.max(axis=0)\n\n\n\n\narray([ 0.9976845 ,  0.895387  ,  0.67375734])\n\n\n\n# cumulative sum of the elements\na.cumsum(axis=1)\n\n\n\n\narray([[ 0.71770831,  1.61309531,  2.19509057],\n       [ 0.32399079,  0.56545253,  1.15968099],\n       [ 0.9976845 ,  1.36357313,  2.03733047]])\n\n\n\n# mean\na.mean()\n\n\n\n\n0.59912244737855702\n\n\n\n# median\nnp.median(a)\n\n\n\n\n0.59422846515666305\n\n\n\n# correlation coefficient\nnp.corrcoef(a)\n\n\n\n\narray([[ 1.        , -0.93042812, -0.55310242],\n       [-0.93042812,  1.        ,  0.20930732],\n       [-0.55310242,  0.20930732,  1.        ]])\n\n\n\n# stardard deviation\nnp.std(a)\n\n\n\n\n0.24142891382802531\n\n\n\nCopy Arrays\n\n\na = np.random.random((3, 3))\na\n\n\n\n\narray([[ 0.25274882,  0.19042929,  0.16823795],\n       [ 0.39392342,  0.05954749,  0.8608243 ],\n       [ 0.99375507,  0.92845989,  0.45681322]])\n\n\n\na.view()\n\n\n\n\narray([[ 0.25274882,  0.19042929,  0.16823795],\n       [ 0.39392342,  0.05954749,  0.8608243 ],\n       [ 0.99375507,  0.92845989,  0.45681322]])\n\n\n\nnp.copy(a)\n\n\n\n\narray([[ 0.25274882,  0.19042929,  0.16823795],\n       [ 0.39392342,  0.05954749,  0.8608243 ],\n       [ 0.99375507,  0.92845989,  0.45681322]])\n\n\n\nh = a.copy()\nh\n\n\n\n\narray([[ 0.25274882,  0.19042929,  0.16823795],\n       [ 0.39392342,  0.05954749,  0.8608243 ],\n       [ 0.99375507,  0.92845989,  0.45681322]])\n\n\n\nSorting Arrays\n\n\na = np.random.random((3, 3))\na\n\n\n\n\narray([[ 0.11422752,  0.30046885,  0.15876115],\n       [ 0.89595996,  0.47878824,  0.41827471],\n       [ 0.69593773,  0.52119338,  0.33048738]])\n\n\n\na.sort()\na\n\n\n\n\narray([[ 0.11422752,  0.15876115,  0.30046885],\n       [ 0.41827471,  0.47878824,  0.89595996],\n       [ 0.33048738,  0.52119338,  0.69593773]])\n\n\n\na.sort(axis=0)\na\n\n\n\n\narray([[ 0.11422752,  0.15876115,  0.30046885],\n       [ 0.33048738,  0.47878824,  0.69593773],\n       [ 0.41827471,  0.52119338,  0.89595996]])\n\n\n\nSubsetting, Slicing, Indexing\n\n\nSubsettings\n\n\na = np.random.random((3, 3))\na\n\n\n\n\narray([[ 0.07989823,  0.4180309 ,  0.83932547],\n       [ 0.06318651,  0.20509151,  0.08262809],\n       [ 0.64938826,  0.531026  ,  0.38633983]])\n\n\n\n# select the element at the 2nd index\na[2]\n\n\n\n\narray([ 0.64938826,  0.531026  ,  0.38633983])\n\n\n\n# select the element at row 0 column 2\na[1][2]\na[1, 2]\n\n\n\n\n0.08262808937797228\n\n\n\nSlicing\n\n\n# select items at index 0 and 1\na[0:2]\n\n\n\n\narray([[ 0.07989823,  0.4180309 ,  0.83932547],\n       [ 0.06318651,  0.20509151,  0.08262809]])\n\n\n\n# select items at r\u1edb 0 and 1 in column 1\na[0:2, 1]\n\n\n\n\narray([ 0.4180309 ,  0.20509151])\n\n\n\n# select all items at row 0\na[1, ...]\na[1, ]\n\n\n\n\narray([ 0.06318651,  0.20509151,  0.08262809])\n\n\n\n# reversed array a\na[::-1]\n\n\n\n\narray([[ 0.64938826,  0.531026  ,  0.38633983],\n       [ 0.06318651,  0.20509151,  0.08262809],\n       [ 0.07989823,  0.4180309 ,  0.83932547]])\n\n\n\nBoolean indexing\n\n\n# select elements from a less than 0.5\na[a \n 0.5]\n\n\n\n\narray([ 0.07989823,  0.4180309 ,  0.06318651,  0.20509151,  0.08262809,\n        0.38633983])\n\n\n\nFancy indexing\n\n\n# select elements (1,0), (0,1), (1, 2) and (0,0)\na[[1, 0, 1, 0], [0, 1, 2, 0]]\n\n\n\n\narray([ 0.06318651,  0.4180309 ,  0.08262809,  0.07989823])\n\n\n\n# select a subset of the matrix's rows and columns\na[[1, 0, 1, 0]][:, [0, 1, 2, 0]]\n\n\n\n\narray([[ 0.06318651,  0.20509151,  0.08262809,  0.06318651],\n       [ 0.07989823,  0.4180309 ,  0.83932547,  0.07989823],\n       [ 0.06318651,  0.20509151,  0.08262809,  0.06318651],\n       [ 0.07989823,  0.4180309 ,  0.83932547,  0.07989823]])\n\n\n\nArray Manipulation\n\n\nTransposing Array\n\n\na = np.random.random((2, 3))\na\n\n\n\n\narray([[ 0.57430709,  0.64401188,  0.12761183],\n       [ 0.0726823 ,  0.7951682 ,  0.54114093]])\n\n\n\n# permulate array dimensions\ni = np.transpose(a)\ni\n\n\n\n\narray([[ 0.57430709,  0.0726823 ],\n       [ 0.64401188,  0.7951682 ],\n       [ 0.12761183,  0.54114093]])\n\n\n\n# permulate array dimensions\ni.T\n\n\n\n\narray([[ 0.57430709,  0.64401188,  0.12761183],\n       [ 0.0726823 ,  0.7951682 ,  0.54114093]])\n\n\n\nChanging Array Shape\n\n\n# flatten the array\na.ravel()\n\n\n\n\narray([ 0.57430709,  0.64401188,  0.12761183,  0.0726823 ,  0.7951682 ,\n        0.54114093])\n\n\n\n# reshape, but don't change data\na.reshape(3, -2)\n\n\n\n\narray([[ 0.57430709,  0.64401188],\n       [ 0.12761183,  0.0726823 ],\n       [ 0.7951682 ,  0.54114093]])\n\n\n\nAdding/Removing Elements\n\n\n# return a new array with shape (2, 6)\na.resize(2, 3)\na\n\n\n\n\narray([[ 0.57430709,  0.64401188,  0.12761183],\n       [ 0.0726823 ,  0.7951682 ,  0.54114093]])\n\n\n\n# append items to an array\nh = np.random.random((2, 3))\nprint \nh:\n, h\ng = np.random.random((2, 3))\nprint \ng:\n, g\nnp.append(h, g)\n\n\n\n\nh: [[ 0.67964404  0.09256795  0.90630423]\n [ 0.52906489  0.51567697  0.95132012]]\ng: [[ 0.03126344  0.84908154  0.74228134]\n [ 0.40333143  0.28595213  0.68416838]]\n\n\n\n\n\narray([ 0.67964404,  0.09256795,  0.90630423,  0.52906489,  0.51567697,\n        0.95132012,  0.03126344,  0.84908154,  0.74228134,  0.40333143,\n        0.28595213,  0.68416838])\n\n\n\n# insert items in an array\na = np.random.random((1, 3))\nprint \na:\n, a\nnp.insert(a, 1, 0.5)\n\n\n\n\na: [[ 0.76135438  0.30331334  0.91866363]]\n\n\n\n\n\narray([ 0.76135438,  0.5       ,  0.30331334,  0.91866363])\n\n\n\n# delete items from an array\na = np.random.random((1, 3))\nprint \na:\n, a\nnp.delete(a, [1])\n\n\n\n\na: [[ 0.1034073   0.93066432  0.49608264]]\n\n\n\n\n\narray([ 0.1034073 ,  0.49608264])\n\n\n\nCombining Arrays\n\n\n# concatenate arrays\na = np.random.random((1, 3))\nprint a\nb = np.random.random((1, 3))\nprint b\nnp.concatenate((a, b), axis=0)\n\n\n\n\n[[ 0.34496986  0.59502574  0.43416152]]\n[[ 0.98921435  0.68832237  0.44286195]]\n\n\n\n\n\narray([[ 0.34496986,  0.59502574,  0.43416152],\n       [ 0.98921435,  0.68832237,  0.44286195]])\n\n\n\n# stack arrays vertically (row-wise)\na = np.random.random((1, 3))\nprint a\nb = np.random.random((2, 3))\nprint b\nnp.vstack((a, b)) #  equivalent to np.r_[a, b]\n\n\n\n\n[[ 0.78793841  0.9923401   0.96372077]]\n[[ 0.75537083  0.09781391  0.25327948]\n [ 0.20607759  0.03763863  0.30818643]]\n\n\n\n\n\narray([[ 0.78793841,  0.9923401 ,  0.96372077],\n       [ 0.75537083,  0.09781391,  0.25327948],\n       [ 0.20607759,  0.03763863,  0.30818643]])\n\n\n\n# stack arrays horizontally (column-wise)\na = np.random.random((3, 1))\nprint a\nb = np.random.random((3, 2))\nprint b\nnp.hstack((a, b)) \n\n\n\n\n[[ 0.33728008]\n [ 0.1091688 ]\n [ 0.68714517]]\n[[ 0.61421635  0.49316384]\n [ 0.19072731  0.04383904]\n [ 0.30587218  0.28743208]]\n\n\n\n\n\narray([[ 0.33728008,  0.61421635,  0.49316384],\n       [ 0.1091688 ,  0.19072731,  0.04383904],\n       [ 0.68714517,  0.30587218,  0.28743208]])\n\n\n\n# equivalent to np.hstack\nnp.column_stack((a, b))\n\n\n\n\narray([[ 0.33728008,  0.61421635,  0.49316384],\n       [ 0.1091688 ,  0.19072731,  0.04383904],\n       [ 0.68714517,  0.30587218,  0.28743208]])\n\n\n\n# equivalent to np.hstack\nnp.c_[a, b]\n\n\n\n\narray([[ 0.33728008,  0.61421635,  0.49316384],\n       [ 0.1091688 ,  0.19072731,  0.04383904],\n       [ 0.68714517,  0.30587218,  0.28743208]])\n\n\n\nSpliting Arrays\n\n\na = np.random.random((3, 4))\nprint a\n\n\n\n\n[[ 0.64277816  0.75935599  0.64927247  0.80253242]\n [ 0.87630664  0.19748931  0.51895547  0.83645583]\n [ 0.03132085  0.043291    0.10945252  0.31883126]]\n\n\n\n# split the array horizontally at the 3rd index\nnp.split(a, 3)\n\n\n\n\n[array([[ 0.64277816,  0.75935599,  0.64927247,  0.80253242]]),\n array([[ 0.87630664,  0.19748931,  0.51895547,  0.83645583]]),\n array([[ 0.03132085,  0.043291  ,  0.10945252,  0.31883126]])]\n\n\n\n# split the array vertically at the 3rd index\nnp.vsplit(a, 3)\n\n\n\n\n[array([[ 0.64277816,  0.75935599,  0.64927247,  0.80253242]]),\n array([[ 0.87630664,  0.19748931,  0.51895547,  0.83645583]]),\n array([[ 0.03132085,  0.043291  ,  0.10945252,  0.31883126]])]\n\n\n\nSuggested Readings\n\n\n\n\nwww.datacamp.com. Python For Data Science Cheat Sheet: Numpy Basics", 
+            "title": "numpy"
+        }, 
+        {
+            "location": "/numpy/#numpy", 
+            "text": "Use the following import convention:  import numpy as np", 
+            "title": "NumPy"
+        }, 
+        {
+            "location": "/numpy/#creating-arrays", 
+            "text": "a = np.array([1, 2, 3])\nb = np.array([(1.5, 2, 3), (4, 5, 6)], dtype=float)\nc = np.array([[(1.5, 2, 3), (4, 5, 6)], [(3, 2, 1), (4, 5, 6)]], dtype=float)", 
+            "title": "Creating Arrays"
+        }, 
+        {
+            "location": "/numpy/#initial-placeholders", 
+            "text": "# Create an array of zeros\nnp.zeros((3, 4))  array([[ 0.,  0.,  0.,  0.],\n       [ 0.,  0.,  0.,  0.],\n       [ 0.,  0.,  0.,  0.]])  # Create an array of ones\nnp.ones((2, 3, 4), dtype=np.int16)  array([[[1, 1, 1, 1],\n        [1, 1, 1, 1],\n        [1, 1, 1, 1]],\n\n       [[1, 1, 1, 1],\n        [1, 1, 1, 1],\n        [1, 1, 1, 1]]], dtype=int16)  # Create an array of evenly spaced values (step value)\nnp.arange(10, 25, 5)  array([10, 15, 20])  # Create an array of evenly spaced values (number of samples)\nnp.linspace(0, 2, 9)  array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ,  1.25,  1.5 ,  1.75,  2.  ])  # Create a constant array\nnp.full((2, 2), 7)  C:\\ProgramData\\Anaconda2\\lib\\site-packages\\numpy\\core\\numeric.py:301: FutureWarning: in the future, full((2, 2), 7) will return an array of dtype('int32')\n  format(shape, fill_value, array(fill_value).dtype), FutureWarning)\n\n\n\n\n\narray([[ 7.,  7.],\n       [ 7.,  7.]])  # Create a 2x2 identity matirx\nnp.eye(2)  array([[ 1.,  0.],\n       [ 0.,  1.]])  # Create an array with random values\nnp.random.random((2, 2))  array([[ 0.11121701,  0.12191919],\n       [ 0.61608418,  0.91899253]])  # Create an empty array\nnp.empty((3, 2))  array([[ 0.,  0.],\n       [ 0.,  0.],\n       [ 0.,  0.]])", 
+            "title": "Initial Placeholders"
+        }, 
+        {
+            "location": "/numpy/#io", 
+            "text": "", 
+            "title": "IO"
+        }, 
+        {
+            "location": "/numpy/#saving-loading-on-disk", 
+            "text": "a = np.array([(1, 2), (3, 4)])\nb = np.array([(5, 6), (7, 8)])\nnp.save('my_array', a)\nnp.savez('arrays', a, b)\nnp.load('arrays.npz')  numpy.lib.npyio.NpzFile at 0x5c81ac8", 
+            "title": "Saving &amp; Loading On Disk"
+        }, 
+        {
+            "location": "/numpy/#saving-loading-text-files", 
+            "text": "np.loadtxt( myfile.txt )  array([[ 1.,  2.,  3.],\n       [ 2.,  3.,  4.]])  np.genfromtxt( my_file.csv , delimiter= , )  array([[ 1.,  2.,  3.],\n       [ 4.,  5.,  6.]])  a = np.array([(1.5, 2, 3), (4, 5, 6)], dtype=float)\nnp.savetxt( myarray.txt , a, delimiter=   )", 
+            "title": "Saving &amp; Loading Text Files"
+        }, 
+        {
+            "location": "/numpy/#data-types", 
+            "text": "# Signed 64-bit integer types\nnp.int64\n# Stardard double-precision floating point\nnp.float32\n# Complex numbers represented by 128 floats\nnp.complex\n# Boolean type storing TRUE and FALSE values\nnp.bool\n# Python object type \nnp.object\n# Fixed-length string type\nnp.string_\n# Fixed-length unicode type\nnp.unicode_  numpy.unicode_", 
+            "title": "Data Types"
+        }, 
+        {
+            "location": "/numpy/#inspecting-your-array", 
+            "text": "a = np.array([(1.5, 2, 3), (4, 5, 6)], dtype=float)  # array dimensions\na.shape  (2L, 3L)  # length of array\nlen(a)  2  # number of array dimensions\na.ndim  2  # number of array elements\na.size  6  # data type of array elements\na.dtype  dtype('float64')  # name of data type\na.dtype.name  'float64'  # convert an array to a different type\na.astype(int)  array([[1, 2, 3],\n       [4, 5, 6]])", 
+            "title": "Inspecting Your Array"
+        }, 
+        {
+            "location": "/numpy/#asking-for-help", 
+            "text": "np.info(np.ndarray.dtype)  Data-type of the array's elements.\n\nParameters\n----------\nNone\n\nReturns\n-------\nd : numpy dtype object\n\nSee Also\n--------\nnumpy.dtype\n\nExamples\n--------  x\narray([[0, 1],\n       [2, 3]])  x.dtype\ndtype('int32')  type(x.dtype) type 'numpy.dtype'", 
+            "title": "Asking For Help"
+        }, 
+        {
+            "location": "/numpy/#array-mathmatics", 
+            "text": "", 
+            "title": "Array Mathmatics"
+        }, 
+        {
+            "location": "/numpy/#arithmetic-operations", 
+            "text": "a = np.random.random((2, 2))\nb = np.random.random((2, 2))  # subtraction\nnp.subtract(a, b)\na - b  array([[-0.04906355,  0.24579184],\n       [ 0.45085259,  0.55266361]])  # addition\nnp.add(b, a)\nb + a  array([[ 0.11861634,  1.28886181],\n       [ 0.84371684,  1.37134298]])  # division\nnp.divide(a, b)\na / b  array([[ 0.41479504,  1.47128543],\n       [ 3.29520803,  2.35013443]])  # multiplication\nnp.multiply(a, b)\na * b  array([[ 0.00291565,  0.40018778],\n       [ 0.12714751,  0.39378613]])  # exponentiation\nnp.exp(b)  array([[ 1.08745483,  1.68461152],\n       [ 1.21705271,  1.50582314]])  # square root\nnp.exp(b)  array([[ 1.08745483,  1.68461152],\n       [ 1.21705271,  1.50582314]])  # sines of an array\nnp.sin(a)  array([[ 0.03476938,  0.69421365],\n       [ 0.60302258,  0.82033885]])  # cosine of an array\nnp.cos(b)  array([[ 0.99648749,  0.86705545],\n       [ 0.98076917,  0.91738383]])  # natural algorithm\nnp.log(a)  array([[-3.35881648, -0.26484246],\n       [-0.43496903, -0.03873741]])  # dot product\na.dot(b)\nnp.dot(a, b)  array([[ 0.15364329,  0.33223443],\n       [ 0.24323666,  0.73136775]])", 
+            "title": "Arithmetic Operations"
+        }, 
+        {
+            "location": "/numpy/#comparison", 
+            "text": "a = np.random.random((2, 2))\na  array([[ 0.20271908,  0.83347777],\n       [ 0.61463859,  0.47298106]])  b = np.random.random((2, 2))\nb  array([[ 0.71492635,  0.48317927],\n       [ 0.83547998,  0.67228618]])  # element-wise comparison\na == b   array([[False, False],\n       [False, False]], dtype=bool)  # element-wise comparison\na   2  array([[ True,  True],\n       [ True,  True]], dtype=bool)  # array-wise comparison\nnp.array_equal(a, b)  False", 
+            "title": "Comparison"
+        }, 
+        {
+            "location": "/numpy/#aggregate-functions", 
+            "text": "a = np.random.random((3, 3))\na  array([[ 0.71770831,  0.895387  ,  0.58199526],\n       [ 0.32399079,  0.24146174,  0.59422847],\n       [ 0.9976845 ,  0.36588863,  0.67375734]])  # array-wise sum\na.sum()  5.392102026407013  # array-wise minimum value\na.min()  0.2414617386336485  # maximum value of an array row\na.max(axis=0)  array([ 0.9976845 ,  0.895387  ,  0.67375734])  # cumulative sum of the elements\na.cumsum(axis=1)  array([[ 0.71770831,  1.61309531,  2.19509057],\n       [ 0.32399079,  0.56545253,  1.15968099],\n       [ 0.9976845 ,  1.36357313,  2.03733047]])  # mean\na.mean()  0.59912244737855702  # median\nnp.median(a)  0.59422846515666305  # correlation coefficient\nnp.corrcoef(a)  array([[ 1.        , -0.93042812, -0.55310242],\n       [-0.93042812,  1.        ,  0.20930732],\n       [-0.55310242,  0.20930732,  1.        ]])  # stardard deviation\nnp.std(a)  0.24142891382802531", 
+            "title": "Aggregate Functions"
+        }, 
+        {
+            "location": "/numpy/#copy-arrays", 
+            "text": "a = np.random.random((3, 3))\na  array([[ 0.25274882,  0.19042929,  0.16823795],\n       [ 0.39392342,  0.05954749,  0.8608243 ],\n       [ 0.99375507,  0.92845989,  0.45681322]])  a.view()  array([[ 0.25274882,  0.19042929,  0.16823795],\n       [ 0.39392342,  0.05954749,  0.8608243 ],\n       [ 0.99375507,  0.92845989,  0.45681322]])  np.copy(a)  array([[ 0.25274882,  0.19042929,  0.16823795],\n       [ 0.39392342,  0.05954749,  0.8608243 ],\n       [ 0.99375507,  0.92845989,  0.45681322]])  h = a.copy()\nh  array([[ 0.25274882,  0.19042929,  0.16823795],\n       [ 0.39392342,  0.05954749,  0.8608243 ],\n       [ 0.99375507,  0.92845989,  0.45681322]])", 
+            "title": "Copy Arrays"
+        }, 
+        {
+            "location": "/numpy/#sorting-arrays", 
+            "text": "a = np.random.random((3, 3))\na  array([[ 0.11422752,  0.30046885,  0.15876115],\n       [ 0.89595996,  0.47878824,  0.41827471],\n       [ 0.69593773,  0.52119338,  0.33048738]])  a.sort()\na  array([[ 0.11422752,  0.15876115,  0.30046885],\n       [ 0.41827471,  0.47878824,  0.89595996],\n       [ 0.33048738,  0.52119338,  0.69593773]])  a.sort(axis=0)\na  array([[ 0.11422752,  0.15876115,  0.30046885],\n       [ 0.33048738,  0.47878824,  0.69593773],\n       [ 0.41827471,  0.52119338,  0.89595996]])", 
+            "title": "Sorting Arrays"
+        }, 
+        {
+            "location": "/numpy/#subsetting-slicing-indexing", 
+            "text": "Subsettings  a = np.random.random((3, 3))\na  array([[ 0.07989823,  0.4180309 ,  0.83932547],\n       [ 0.06318651,  0.20509151,  0.08262809],\n       [ 0.64938826,  0.531026  ,  0.38633983]])  # select the element at the 2nd index\na[2]  array([ 0.64938826,  0.531026  ,  0.38633983])  # select the element at row 0 column 2\na[1][2]\na[1, 2]  0.08262808937797228  Slicing  # select items at index 0 and 1\na[0:2]  array([[ 0.07989823,  0.4180309 ,  0.83932547],\n       [ 0.06318651,  0.20509151,  0.08262809]])  # select items at r\u1edb 0 and 1 in column 1\na[0:2, 1]  array([ 0.4180309 ,  0.20509151])  # select all items at row 0\na[1, ...]\na[1, ]  array([ 0.06318651,  0.20509151,  0.08262809])  # reversed array a\na[::-1]  array([[ 0.64938826,  0.531026  ,  0.38633983],\n       [ 0.06318651,  0.20509151,  0.08262809],\n       [ 0.07989823,  0.4180309 ,  0.83932547]])  Boolean indexing  # select elements from a less than 0.5\na[a   0.5]  array([ 0.07989823,  0.4180309 ,  0.06318651,  0.20509151,  0.08262809,\n        0.38633983])  Fancy indexing  # select elements (1,0), (0,1), (1, 2) and (0,0)\na[[1, 0, 1, 0], [0, 1, 2, 0]]  array([ 0.06318651,  0.4180309 ,  0.08262809,  0.07989823])  # select a subset of the matrix's rows and columns\na[[1, 0, 1, 0]][:, [0, 1, 2, 0]]  array([[ 0.06318651,  0.20509151,  0.08262809,  0.06318651],\n       [ 0.07989823,  0.4180309 ,  0.83932547,  0.07989823],\n       [ 0.06318651,  0.20509151,  0.08262809,  0.06318651],\n       [ 0.07989823,  0.4180309 ,  0.83932547,  0.07989823]])", 
+            "title": "Subsetting, Slicing, Indexing"
+        }, 
+        {
+            "location": "/numpy/#array-manipulation", 
+            "text": "", 
+            "title": "Array Manipulation"
+        }, 
+        {
+            "location": "/numpy/#transposing-array", 
+            "text": "a = np.random.random((2, 3))\na  array([[ 0.57430709,  0.64401188,  0.12761183],\n       [ 0.0726823 ,  0.7951682 ,  0.54114093]])  # permulate array dimensions\ni = np.transpose(a)\ni  array([[ 0.57430709,  0.0726823 ],\n       [ 0.64401188,  0.7951682 ],\n       [ 0.12761183,  0.54114093]])  # permulate array dimensions\ni.T  array([[ 0.57430709,  0.64401188,  0.12761183],\n       [ 0.0726823 ,  0.7951682 ,  0.54114093]])", 
+            "title": "Transposing Array"
+        }, 
+        {
+            "location": "/numpy/#changing-array-shape", 
+            "text": "# flatten the array\na.ravel()  array([ 0.57430709,  0.64401188,  0.12761183,  0.0726823 ,  0.7951682 ,\n        0.54114093])  # reshape, but don't change data\na.reshape(3, -2)  array([[ 0.57430709,  0.64401188],\n       [ 0.12761183,  0.0726823 ],\n       [ 0.7951682 ,  0.54114093]])", 
+            "title": "Changing Array Shape"
+        }, 
+        {
+            "location": "/numpy/#addingremoving-elements", 
+            "text": "# return a new array with shape (2, 6)\na.resize(2, 3)\na  array([[ 0.57430709,  0.64401188,  0.12761183],\n       [ 0.0726823 ,  0.7951682 ,  0.54114093]])  # append items to an array\nh = np.random.random((2, 3))\nprint  h: , h\ng = np.random.random((2, 3))\nprint  g: , g\nnp.append(h, g)  h: [[ 0.67964404  0.09256795  0.90630423]\n [ 0.52906489  0.51567697  0.95132012]]\ng: [[ 0.03126344  0.84908154  0.74228134]\n [ 0.40333143  0.28595213  0.68416838]]\n\n\n\n\n\narray([ 0.67964404,  0.09256795,  0.90630423,  0.52906489,  0.51567697,\n        0.95132012,  0.03126344,  0.84908154,  0.74228134,  0.40333143,\n        0.28595213,  0.68416838])  # insert items in an array\na = np.random.random((1, 3))\nprint  a: , a\nnp.insert(a, 1, 0.5)  a: [[ 0.76135438  0.30331334  0.91866363]]\n\n\n\n\n\narray([ 0.76135438,  0.5       ,  0.30331334,  0.91866363])  # delete items from an array\na = np.random.random((1, 3))\nprint  a: , a\nnp.delete(a, [1])  a: [[ 0.1034073   0.93066432  0.49608264]]\n\n\n\n\n\narray([ 0.1034073 ,  0.49608264])", 
+            "title": "Adding/Removing Elements"
+        }, 
+        {
+            "location": "/numpy/#combining-arrays", 
+            "text": "# concatenate arrays\na = np.random.random((1, 3))\nprint a\nb = np.random.random((1, 3))\nprint b\nnp.concatenate((a, b), axis=0)  [[ 0.34496986  0.59502574  0.43416152]]\n[[ 0.98921435  0.68832237  0.44286195]]\n\n\n\n\n\narray([[ 0.34496986,  0.59502574,  0.43416152],\n       [ 0.98921435,  0.68832237,  0.44286195]])  # stack arrays vertically (row-wise)\na = np.random.random((1, 3))\nprint a\nb = np.random.random((2, 3))\nprint b\nnp.vstack((a, b)) #  equivalent to np.r_[a, b]  [[ 0.78793841  0.9923401   0.96372077]]\n[[ 0.75537083  0.09781391  0.25327948]\n [ 0.20607759  0.03763863  0.30818643]]\n\n\n\n\n\narray([[ 0.78793841,  0.9923401 ,  0.96372077],\n       [ 0.75537083,  0.09781391,  0.25327948],\n       [ 0.20607759,  0.03763863,  0.30818643]])  # stack arrays horizontally (column-wise)\na = np.random.random((3, 1))\nprint a\nb = np.random.random((3, 2))\nprint b\nnp.hstack((a, b))   [[ 0.33728008]\n [ 0.1091688 ]\n [ 0.68714517]]\n[[ 0.61421635  0.49316384]\n [ 0.19072731  0.04383904]\n [ 0.30587218  0.28743208]]\n\n\n\n\n\narray([[ 0.33728008,  0.61421635,  0.49316384],\n       [ 0.1091688 ,  0.19072731,  0.04383904],\n       [ 0.68714517,  0.30587218,  0.28743208]])  # equivalent to np.hstack\nnp.column_stack((a, b))  array([[ 0.33728008,  0.61421635,  0.49316384],\n       [ 0.1091688 ,  0.19072731,  0.04383904],\n       [ 0.68714517,  0.30587218,  0.28743208]])  # equivalent to np.hstack\nnp.c_[a, b]  array([[ 0.33728008,  0.61421635,  0.49316384],\n       [ 0.1091688 ,  0.19072731,  0.04383904],\n       [ 0.68714517,  0.30587218,  0.28743208]])", 
+            "title": "Combining Arrays"
+        }, 
+        {
+            "location": "/numpy/#spliting-arrays", 
+            "text": "a = np.random.random((3, 4))\nprint a  [[ 0.64277816  0.75935599  0.64927247  0.80253242]\n [ 0.87630664  0.19748931  0.51895547  0.83645583]\n [ 0.03132085  0.043291    0.10945252  0.31883126]]  # split the array horizontally at the 3rd index\nnp.split(a, 3)  [array([[ 0.64277816,  0.75935599,  0.64927247,  0.80253242]]),\n array([[ 0.87630664,  0.19748931,  0.51895547,  0.83645583]]),\n array([[ 0.03132085,  0.043291  ,  0.10945252,  0.31883126]])]  # split the array vertically at the 3rd index\nnp.vsplit(a, 3)  [array([[ 0.64277816,  0.75935599,  0.64927247,  0.80253242]]),\n array([[ 0.87630664,  0.19748931,  0.51895547,  0.83645583]]),\n array([[ 0.03132085,  0.043291  ,  0.10945252,  0.31883126]])]", 
+            "title": "Spliting Arrays"
+        }, 
+        {
+            "location": "/numpy/#suggested-readings", 
+            "text": "www.datacamp.com. Python For Data Science Cheat Sheet: Numpy Basics", 
+            "title": "Suggested Readings"
+        }, 
+        {
+            "location": "/transformation/", 
+            "text": "Transformation\n\n\nDataFrame is a 2-dimensional labeled data structure with columns of potentially different types. You can think of it like a spreadsheet or SQL table, or a dict of Series objects. It is generally the most commonly used pandas object. \n1\n\n\nCreate data frame\n\n\nCreate new data frame from lists\n\n\nimport pandas as pd\nstudents = pd.DataFrame({\n  'name' : [\nKate\n, \nJohn\n, \nTom\n, \nMark\n],\n  'age' : [20, 21, 19, 18]\n})\n#       age  name\n#    0   20  Kate\n#    1   21  John\n#    2   19   Tom\n#    3   18  Mark\n\n\n\n\nLoad dataframe\n\n\nLoad dataframe from datasets\n\n\nimport pandas as pd\nfrom sklearn import datasets\niris_data = datasets.load_iris()\niris = pd.DataFrame(data=iris_data.data, columns=iris_data.feature_names)\niris\n\n\n\n\nSelection\n\n\nSelect by column index\n\n\nstudents.iloc[1:3, :]\n#       age  name\n#    1   21  John\n#    2   19   Tom\n\n\n\n\nFilter\n\n\nstudents = pd.DataFrame({\n  'math' : [90, 80, 95, 50],\n  'physic' : [20, 50, 95, 60]\n})\n#    math  physic\n# 0    90      20\n# 1    80      50\n# 2    95      95\n# 3    50      60\n\n\n\n\nstudents[students['math'] \n 85]\n#    math  physic\n# 0    90      20\n# 2    95      95\n\nstudents[students['math'] == students['physic']]\n#    math  physic\n# 2    95      95\n\n\n\n\nCreate new column\n\n\nstudents = pd.DataFrame({\n  'name' : [\nKate\n, \nJohn\n, \nTom\n, \nMark\n],\n  'age' : [20, 21, 19, 18]\n})\nstudents[\nbirthyear\n] = students.apply(lambda row: 2016 - row['age'], axis=1)\nstudents[\nbirthyear\n] = 2016 - students[\nage\n]\n\n#       age  name  birthyear\n#    0   20  Kate       1996\n#    1   21  John       1995\n#    2   19   Tom       1997\n#    3   18  Mark       1998\n\n\n\n\nDelete column\n\n\nstudents = pd.DataFrame({\n  'name' : [\nKate\n, \nJohn\n, \nTom\n, \nMark\n],\n  'age' : [20, 21, 19, 18]\n})\nstudents = students.drop('age', 1)\n\n\n\n\n\n\nWes McKinney, 10-minute tour of pandas: \nvideo\n, \nnotebook\n\n\n\n\n\n\n\n\n\n\n\n\nDataFrame, Intro to Data Structures", 
+            "title": "Transformation"
+        }, 
+        {
+            "location": "/transformation/#transformation", 
+            "text": "DataFrame is a 2-dimensional labeled data structure with columns of potentially different types. You can think of it like a spreadsheet or SQL table, or a dict of Series objects. It is generally the most commonly used pandas object.  1", 
+            "title": "Transformation"
+        }, 
+        {
+            "location": "/transformation/#create-data-frame", 
+            "text": "Create new data frame from lists  import pandas as pd\nstudents = pd.DataFrame({\n  'name' : [ Kate ,  John ,  Tom ,  Mark ],\n  'age' : [20, 21, 19, 18]\n})\n#       age  name\n#    0   20  Kate\n#    1   21  John\n#    2   19   Tom\n#    3   18  Mark", 
+            "title": "Create data frame"
+        }, 
+        {
+            "location": "/transformation/#load-dataframe", 
+            "text": "Load dataframe from datasets  import pandas as pd\nfrom sklearn import datasets\niris_data = datasets.load_iris()\niris = pd.DataFrame(data=iris_data.data, columns=iris_data.feature_names)\niris", 
+            "title": "Load dataframe"
+        }, 
+        {
+            "location": "/transformation/#selection", 
+            "text": "Select by column index  students.iloc[1:3, :]\n#       age  name\n#    1   21  John\n#    2   19   Tom", 
+            "title": "Selection"
+        }, 
+        {
+            "location": "/transformation/#filter", 
+            "text": "students = pd.DataFrame({\n  'math' : [90, 80, 95, 50],\n  'physic' : [20, 50, 95, 60]\n})\n#    math  physic\n# 0    90      20\n# 1    80      50\n# 2    95      95\n# 3    50      60  students[students['math']   85]\n#    math  physic\n# 0    90      20\n# 2    95      95\n\nstudents[students['math'] == students['physic']]\n#    math  physic\n# 2    95      95", 
+            "title": "Filter"
+        }, 
+        {
+            "location": "/transformation/#create-new-column", 
+            "text": "students = pd.DataFrame({\n  'name' : [ Kate ,  John ,  Tom ,  Mark ],\n  'age' : [20, 21, 19, 18]\n})\nstudents[ birthyear ] = students.apply(lambda row: 2016 - row['age'], axis=1)\nstudents[ birthyear ] = 2016 - students[ age ]\n\n#       age  name  birthyear\n#    0   20  Kate       1996\n#    1   21  John       1995\n#    2   19   Tom       1997\n#    3   18  Mark       1998", 
+            "title": "Create new column"
+        }, 
+        {
+            "location": "/transformation/#delete-column", 
+            "text": "students = pd.DataFrame({\n  'name' : [ Kate ,  John ,  Tom ,  Mark ],\n  'age' : [20, 21, 19, 18]\n})\nstudents = students.drop('age', 1)   Wes McKinney, 10-minute tour of pandas:  video ,  notebook       DataFrame, Intro to Data Structures", 
+            "title": "Delete column"
+        }, 
+        {
+            "location": "/preparation/", 
+            "text": "Preperation\n\n\nNormalization\n\n\nExample \n1\n\n\nimport numpy\nfrom sklearn.preprocessing import normalize\nmatrix = numpy.arange(0,27,3).reshape(3,3).astype(numpy.float64)\n\n# array([[  0.,   3.,   6.],\n#   [  9.,  12.,  15.],\n#   [ 18.,  21.,  24.]])\n\nnormed_matrix = normalize(matrix, axis=1, norm='l1')\n\n# [[ 0.          0.33333333  0.66666667]\n# [ 0.25        0.33333333  0.41666667]\n# [ 0.28571429  0.33333333  0.38095238]]\n\n\n\n\nLabel Encoder\n\n\nEncode labels (categorical variables) with value between 0 and n_classes-1. \n2\n\n\nimport sklearn\nle = sklearn.preprocessing.LabelEncoder()\nle.fit([\nparis\n, \nparis\n, \ntokyo\n, \namsterdam\n])\n# LabelEncoder()\nlist(le.classes_)\n# ['amsterdam', 'paris', 'tokyo']\nle.transform([\ntokyo\n, \ntokyo\n, \nparis\n])\n# array([2, 2, 1]...)\nlist(le.inverse_transform([2, 2, 1]))\n# ['tokyo', 'tokyo', 'paris']\n\n\n\n\n\n\n\n\n\n\n\n\nHow to normalize a 2-dimensional numpy array in python less verbose?\n\n\n\n\n\n\nsklearn.preprocessing.LabelEncoder", 
+            "title": "Preparation"
+        }, 
+        {
+            "location": "/preparation/#preperation", 
+            "text": "", 
+            "title": "Preperation"
+        }, 
+        {
+            "location": "/preparation/#normalization", 
+            "text": "Example  1  import numpy\nfrom sklearn.preprocessing import normalize\nmatrix = numpy.arange(0,27,3).reshape(3,3).astype(numpy.float64)\n\n# array([[  0.,   3.,   6.],\n#   [  9.,  12.,  15.],\n#   [ 18.,  21.,  24.]])\n\nnormed_matrix = normalize(matrix, axis=1, norm='l1')\n\n# [[ 0.          0.33333333  0.66666667]\n# [ 0.25        0.33333333  0.41666667]\n# [ 0.28571429  0.33333333  0.38095238]]", 
+            "title": "Normalization"
+        }, 
+        {
+            "location": "/preparation/#label-encoder", 
+            "text": "Encode labels (categorical variables) with value between 0 and n_classes-1.  2  import sklearn\nle = sklearn.preprocessing.LabelEncoder()\nle.fit([ paris ,  paris ,  tokyo ,  amsterdam ])\n# LabelEncoder()\nlist(le.classes_)\n# ['amsterdam', 'paris', 'tokyo']\nle.transform([ tokyo ,  tokyo ,  paris ])\n# array([2, 2, 1]...)\nlist(le.inverse_transform([2, 2, 1]))\n# ['tokyo', 'tokyo', 'paris']      How to normalize a 2-dimensional numpy array in python less verbose?    sklearn.preprocessing.LabelEncoder", 
+            "title": "Label Encoder"
         }, 
         {
             "location": "/io/", 
@@ -59,61 +259,6 @@
             "location": "/io/#sqlite", 
             "text": "import sqlite3\n\nDB_NAME =  db.sqlite3 \nSELECT_QUERY =  SELECT page_id, type FROM service_page \n# connect to sqlite3\ndb_connector = sqlite3.connect(DB_NAME)\n# excute query\ncursor = db_connector.execute(SELECT_QUERY)\n# return dataset\ndata_set = cursor.fetchall()      pandas.read_excel    pandas.read_sqlite    sqlite3.read_sqlite", 
             "title": "Sqlite"
-        }, 
-        {
-            "location": "/preparation/", 
-            "text": "Preperation\n\n\nNormalization\n\n\nExample \n1\n\n\nimport numpy\nfrom sklearn.preprocessing import normalize\nmatrix = numpy.arange(0,27,3).reshape(3,3).astype(numpy.float64)\n\n# array([[  0.,   3.,   6.],\n#   [  9.,  12.,  15.],\n#   [ 18.,  21.,  24.]])\n\nnormed_matrix = normalize(matrix, axis=1, norm='l1')\n\n# [[ 0.          0.33333333  0.66666667]\n# [ 0.25        0.33333333  0.41666667]\n# [ 0.28571429  0.33333333  0.38095238]]\n\n\n\n\nLabel Encoder\n\n\nEncode labels (categorical variables) with value between 0 and n_classes-1. \n2\n\n\nimport sklearn\nle = sklearn.preprocessing.LabelEncoder()\nle.fit([\nparis\n, \nparis\n, \ntokyo\n, \namsterdam\n])\n# LabelEncoder()\nlist(le.classes_)\n# ['amsterdam', 'paris', 'tokyo']\nle.transform([\ntokyo\n, \ntokyo\n, \nparis\n])\n# array([2, 2, 1]...)\nlist(le.inverse_transform([2, 2, 1]))\n# ['tokyo', 'tokyo', 'paris']\n\n\n\n\n\n\n\n\n\n\n\n\nHow to normalize a 2-dimensional numpy array in python less verbose?\n\n\n\n\n\n\nsklearn.preprocessing.LabelEncoder", 
-            "title": "Preparation"
-        }, 
-        {
-            "location": "/preparation/#preperation", 
-            "text": "", 
-            "title": "Preperation"
-        }, 
-        {
-            "location": "/preparation/#normalization", 
-            "text": "Example  1  import numpy\nfrom sklearn.preprocessing import normalize\nmatrix = numpy.arange(0,27,3).reshape(3,3).astype(numpy.float64)\n\n# array([[  0.,   3.,   6.],\n#   [  9.,  12.,  15.],\n#   [ 18.,  21.,  24.]])\n\nnormed_matrix = normalize(matrix, axis=1, norm='l1')\n\n# [[ 0.          0.33333333  0.66666667]\n# [ 0.25        0.33333333  0.41666667]\n# [ 0.28571429  0.33333333  0.38095238]]", 
-            "title": "Normalization"
-        }, 
-        {
-            "location": "/preparation/#label-encoder", 
-            "text": "Encode labels (categorical variables) with value between 0 and n_classes-1.  2  import sklearn\nle = sklearn.preprocessing.LabelEncoder()\nle.fit([ paris ,  paris ,  tokyo ,  amsterdam ])\n# LabelEncoder()\nlist(le.classes_)\n# ['amsterdam', 'paris', 'tokyo']\nle.transform([ tokyo ,  tokyo ,  paris ])\n# array([2, 2, 1]...)\nlist(le.inverse_transform([2, 2, 1]))\n# ['tokyo', 'tokyo', 'paris']      How to normalize a 2-dimensional numpy array in python less verbose?    sklearn.preprocessing.LabelEncoder", 
-            "title": "Label Encoder"
-        }, 
-        {
-            "location": "/transformation/", 
-            "text": "Transformation\n\n\nDataFrame is a 2-dimensional labeled data structure with columns of potentially different types. You can think of it like a spreadsheet or SQL table, or a dict of Series objects. It is generally the most commonly used pandas object. \n1\n\n\nCreate data frame\n\n\nimport pandas as pd\nstudents = pd.DataFrame({\n  'name' : [\nKate\n, \nJohn\n, \nTom\n, \nMark\n],\n  'age' : [20, 21, 19, 18]})\n\n#       age  name\n#    0   20  Kate\n#    1   21  John\n#    2   19   Tom\n#    3   18  Mark\n\n\n\n\nLoad dataframe\n\n\nimport pandas as pd\nfrom sklearn import datasets\niris_data = datasets.load_iris()\niris = pd.DataFrame(data=iris_data.data, columns=iris_data.feature_names)\niris\n\n\n\n\nSelection\n\n\nstudents.iloc[1:3, :]\n#       age  name\n#    1   21  John\n#    2   19   Tom\n\n\n\n\nCreate new column\n\n\nstudents[\nbirthyear\n] = students.apply(lambda row: 2016 - row['age'], axis=1)\nstudents[\nbirthyear\n] = 2016 - students[\nage\n]\n\n#       age  name  birthyear\n#    0   20  Kate       1996\n#    1   21  John       1995\n#    2   19   Tom       1997\n#    3   18  Mark       1998\n\n\n\n\nDelete column\n\n\nstudents = students.drop('birthyear', 1)\n\n\n\n\n\n\nWes McKinney, 10-minute tour of pandas: \nvideo\n, \nnotebook\n\n\n\n\n\n\n\n\n\n\n\n\nDataFrame, Intro to Data Structures", 
-            "title": "Transformation"
-        }, 
-        {
-            "location": "/transformation/#transformation", 
-            "text": "DataFrame is a 2-dimensional labeled data structure with columns of potentially different types. You can think of it like a spreadsheet or SQL table, or a dict of Series objects. It is generally the most commonly used pandas object.  1", 
-            "title": "Transformation"
-        }, 
-        {
-            "location": "/transformation/#create-data-frame", 
-            "text": "import pandas as pd\nstudents = pd.DataFrame({\n  'name' : [ Kate ,  John ,  Tom ,  Mark ],\n  'age' : [20, 21, 19, 18]})\n\n#       age  name\n#    0   20  Kate\n#    1   21  John\n#    2   19   Tom\n#    3   18  Mark", 
-            "title": "Create data frame"
-        }, 
-        {
-            "location": "/transformation/#load-dataframe", 
-            "text": "import pandas as pd\nfrom sklearn import datasets\niris_data = datasets.load_iris()\niris = pd.DataFrame(data=iris_data.data, columns=iris_data.feature_names)\niris", 
-            "title": "Load dataframe"
-        }, 
-        {
-            "location": "/transformation/#selection", 
-            "text": "students.iloc[1:3, :]\n#       age  name\n#    1   21  John\n#    2   19   Tom", 
-            "title": "Selection"
-        }, 
-        {
-            "location": "/transformation/#create-new-column", 
-            "text": "students[ birthyear ] = students.apply(lambda row: 2016 - row['age'], axis=1)\nstudents[ birthyear ] = 2016 - students[ age ]\n\n#       age  name  birthyear\n#    0   20  Kate       1996\n#    1   21  John       1995\n#    2   19   Tom       1997\n#    3   18  Mark       1998", 
-            "title": "Create new column"
-        }, 
-        {
-            "location": "/transformation/#delete-column", 
-            "text": "students = students.drop('birthyear', 1)   Wes McKinney, 10-minute tour of pandas:  video ,  notebook       DataFrame, Intro to Data Structures", 
-            "title": "Delete column"
         }
     ]
 }

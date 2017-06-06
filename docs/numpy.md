@@ -1,0 +1,1271 @@
+
+## NumPy
+
+Use the following import convention:
+
+
+```python
+import numpy as np
+```
+
+## Creating Arrays
+
+
+```python
+a = np.array([1, 2, 3])
+b = np.array([(1.5, 2, 3), (4, 5, 6)], dtype=float)
+c = np.array([[(1.5, 2, 3), (4, 5, 6)], [(3, 2, 1), (4, 5, 6)]], dtype=float)
+```
+
+## Initial Placeholders
+
+
+```python
+# Create an array of zeros
+np.zeros((3, 4))
+```
+
+
+
+
+    array([[ 0.,  0.,  0.,  0.],
+           [ 0.,  0.,  0.,  0.],
+           [ 0.,  0.,  0.,  0.]])
+
+
+
+
+```python
+# Create an array of ones
+np.ones((2, 3, 4), dtype=np.int16)
+```
+
+
+
+
+    array([[[1, 1, 1, 1],
+            [1, 1, 1, 1],
+            [1, 1, 1, 1]],
+    
+           [[1, 1, 1, 1],
+            [1, 1, 1, 1],
+            [1, 1, 1, 1]]], dtype=int16)
+
+
+
+
+```python
+# Create an array of evenly spaced values (step value)
+np.arange(10, 25, 5)
+```
+
+
+
+
+    array([10, 15, 20])
+
+
+
+
+```python
+# Create an array of evenly spaced values (number of samples)
+np.linspace(0, 2, 9)
+```
+
+
+
+
+    array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ,  1.25,  1.5 ,  1.75,  2.  ])
+
+
+
+
+```python
+# Create a constant array
+np.full((2, 2), 7)
+```
+
+    C:\ProgramData\Anaconda2\lib\site-packages\numpy\core\numeric.py:301: FutureWarning: in the future, full((2, 2), 7) will return an array of dtype('int32')
+      format(shape, fill_value, array(fill_value).dtype), FutureWarning)
+    
+
+
+
+
+    array([[ 7.,  7.],
+           [ 7.,  7.]])
+
+
+
+
+```python
+# Create a 2x2 identity matirx
+np.eye(2)
+```
+
+
+
+
+    array([[ 1.,  0.],
+           [ 0.,  1.]])
+
+
+
+
+```python
+# Create an array with random values
+np.random.random((2, 2))
+```
+
+
+
+
+    array([[ 0.11121701,  0.12191919],
+           [ 0.61608418,  0.91899253]])
+
+
+
+
+```python
+# Create an empty array
+np.empty((3, 2))
+```
+
+
+
+
+    array([[ 0.,  0.],
+           [ 0.,  0.],
+           [ 0.,  0.]])
+
+
+
+## IO
+
+### Saving & Loading On Disk
+
+
+```python
+a = np.array([(1, 2), (3, 4)])
+b = np.array([(5, 6), (7, 8)])
+np.save('my_array', a)
+np.savez('arrays', a, b)
+np.load('arrays.npz')
+```
+
+
+
+
+    <numpy.lib.npyio.NpzFile at 0x5c81ac8>
+
+
+
+### Saving & Loading Text Files
+
+
+```python
+np.loadtxt("myfile.txt")
+```
+
+
+
+
+    array([[ 1.,  2.,  3.],
+           [ 2.,  3.,  4.]])
+
+
+
+
+```python
+np.genfromtxt("my_file.csv", delimiter=",")
+```
+
+
+
+
+    array([[ 1.,  2.,  3.],
+           [ 4.,  5.,  6.]])
+
+
+
+
+```python
+a = np.array([(1.5, 2, 3), (4, 5, 6)], dtype=float)
+np.savetxt("myarray.txt", a, delimiter=" ")
+```
+
+## Data Types
+
+
+```python
+# Signed 64-bit integer types
+np.int64
+# Stardard double-precision floating point
+np.float32
+# Complex numbers represented by 128 floats
+np.complex
+# Boolean type storing TRUE and FALSE values
+np.bool
+# Python object type 
+np.object
+# Fixed-length string type
+np.string_
+# Fixed-length unicode type
+np.unicode_
+```
+
+
+
+
+    numpy.unicode_
+
+
+
+### Inspecting Your Array
+
+
+```python
+a = np.array([(1.5, 2, 3), (4, 5, 6)], dtype=float)
+```
+
+
+```python
+# array dimensions
+a.shape
+```
+
+
+
+
+    (2L, 3L)
+
+
+
+
+```python
+# length of array
+len(a)
+```
+
+
+
+
+    2
+
+
+
+
+```python
+# number of array dimensions
+a.ndim
+```
+
+
+
+
+    2
+
+
+
+
+```python
+# number of array elements
+a.size
+```
+
+
+
+
+    6
+
+
+
+
+```python
+# data type of array elements
+a.dtype
+```
+
+
+
+
+    dtype('float64')
+
+
+
+
+```python
+# name of data type
+a.dtype.name
+```
+
+
+
+
+    'float64'
+
+
+
+
+```python
+# convert an array to a different type
+a.astype(int)
+```
+
+
+
+
+    array([[1, 2, 3],
+           [4, 5, 6]])
+
+
+
+## Asking For Help
+
+
+```python
+np.info(np.ndarray.dtype)
+```
+
+    Data-type of the array's elements.
+    
+    Parameters
+    ----------
+    None
+    
+    Returns
+    -------
+    d : numpy dtype object
+    
+    See Also
+    --------
+    numpy.dtype
+    
+    Examples
+    --------
+    >>> x
+    array([[0, 1],
+           [2, 3]])
+    >>> x.dtype
+    dtype('int32')
+    >>> type(x.dtype)
+    <type 'numpy.dtype'>
+    
+
+## Array Mathmatics
+
+### Arithmetic Operations
+
+
+```python
+a = np.random.random((2, 2))
+b = np.random.random((2, 2))
+```
+
+
+```python
+# subtraction
+np.subtract(a, b)
+a - b
+```
+
+
+
+
+    array([[-0.04906355,  0.24579184],
+           [ 0.45085259,  0.55266361]])
+
+
+
+
+```python
+# addition
+np.add(b, a)
+b + a
+```
+
+
+
+
+    array([[ 0.11861634,  1.28886181],
+           [ 0.84371684,  1.37134298]])
+
+
+
+
+```python
+# division
+np.divide(a, b)
+a / b
+```
+
+
+
+
+    array([[ 0.41479504,  1.47128543],
+           [ 3.29520803,  2.35013443]])
+
+
+
+
+```python
+# multiplication
+np.multiply(a, b)
+a * b
+```
+
+
+
+
+    array([[ 0.00291565,  0.40018778],
+           [ 0.12714751,  0.39378613]])
+
+
+
+
+```python
+# exponentiation
+np.exp(b)
+```
+
+
+
+
+    array([[ 1.08745483,  1.68461152],
+           [ 1.21705271,  1.50582314]])
+
+
+
+
+```python
+# square root
+np.exp(b)
+```
+
+
+
+
+    array([[ 1.08745483,  1.68461152],
+           [ 1.21705271,  1.50582314]])
+
+
+
+
+```python
+# sines of an array
+np.sin(a)
+```
+
+
+
+
+    array([[ 0.03476938,  0.69421365],
+           [ 0.60302258,  0.82033885]])
+
+
+
+
+```python
+# cosine of an array
+np.cos(b)
+```
+
+
+
+
+    array([[ 0.99648749,  0.86705545],
+           [ 0.98076917,  0.91738383]])
+
+
+
+
+```python
+# natural algorithm
+np.log(a)
+```
+
+
+
+
+    array([[-3.35881648, -0.26484246],
+           [-0.43496903, -0.03873741]])
+
+
+
+
+```python
+# dot product
+a.dot(b)
+np.dot(a, b)
+```
+
+
+
+
+    array([[ 0.15364329,  0.33223443],
+           [ 0.24323666,  0.73136775]])
+
+
+
+### Comparison
+
+
+```python
+a = np.random.random((2, 2))
+a
+```
+
+
+
+
+    array([[ 0.20271908,  0.83347777],
+           [ 0.61463859,  0.47298106]])
+
+
+
+
+```python
+b = np.random.random((2, 2))
+b
+```
+
+
+
+
+    array([[ 0.71492635,  0.48317927],
+           [ 0.83547998,  0.67228618]])
+
+
+
+
+```python
+# element-wise comparison
+a == b 
+```
+
+
+
+
+    array([[False, False],
+           [False, False]], dtype=bool)
+
+
+
+
+```python
+# element-wise comparison
+a < 2
+```
+
+
+
+
+    array([[ True,  True],
+           [ True,  True]], dtype=bool)
+
+
+
+
+```python
+# array-wise comparison
+np.array_equal(a, b)
+```
+
+
+
+
+    False
+
+
+
+### Aggregate Functions
+
+
+```python
+a = np.random.random((3, 3))
+a
+```
+
+
+
+
+    array([[ 0.71770831,  0.895387  ,  0.58199526],
+           [ 0.32399079,  0.24146174,  0.59422847],
+           [ 0.9976845 ,  0.36588863,  0.67375734]])
+
+
+
+
+```python
+# array-wise sum
+a.sum()
+```
+
+
+
+
+    5.392102026407013
+
+
+
+
+```python
+# array-wise minimum value
+a.min()
+```
+
+
+
+
+    0.2414617386336485
+
+
+
+
+```python
+# maximum value of an array row
+a.max(axis=0)
+```
+
+
+
+
+    array([ 0.9976845 ,  0.895387  ,  0.67375734])
+
+
+
+
+```python
+# cumulative sum of the elements
+a.cumsum(axis=1)
+```
+
+
+
+
+    array([[ 0.71770831,  1.61309531,  2.19509057],
+           [ 0.32399079,  0.56545253,  1.15968099],
+           [ 0.9976845 ,  1.36357313,  2.03733047]])
+
+
+
+
+```python
+# mean
+a.mean()
+```
+
+
+
+
+    0.59912244737855702
+
+
+
+
+```python
+# median
+np.median(a)
+```
+
+
+
+
+    0.59422846515666305
+
+
+
+
+```python
+# correlation coefficient
+np.corrcoef(a)
+```
+
+
+
+
+    array([[ 1.        , -0.93042812, -0.55310242],
+           [-0.93042812,  1.        ,  0.20930732],
+           [-0.55310242,  0.20930732,  1.        ]])
+
+
+
+
+```python
+# stardard deviation
+np.std(a)
+```
+
+
+
+
+    0.24142891382802531
+
+
+
+## Copy Arrays
+
+
+```python
+a = np.random.random((3, 3))
+a
+```
+
+
+
+
+    array([[ 0.25274882,  0.19042929,  0.16823795],
+           [ 0.39392342,  0.05954749,  0.8608243 ],
+           [ 0.99375507,  0.92845989,  0.45681322]])
+
+
+
+
+```python
+a.view()
+```
+
+
+
+
+    array([[ 0.25274882,  0.19042929,  0.16823795],
+           [ 0.39392342,  0.05954749,  0.8608243 ],
+           [ 0.99375507,  0.92845989,  0.45681322]])
+
+
+
+
+```python
+np.copy(a)
+```
+
+
+
+
+    array([[ 0.25274882,  0.19042929,  0.16823795],
+           [ 0.39392342,  0.05954749,  0.8608243 ],
+           [ 0.99375507,  0.92845989,  0.45681322]])
+
+
+
+
+```python
+h = a.copy()
+h
+```
+
+
+
+
+    array([[ 0.25274882,  0.19042929,  0.16823795],
+           [ 0.39392342,  0.05954749,  0.8608243 ],
+           [ 0.99375507,  0.92845989,  0.45681322]])
+
+
+
+## Sorting Arrays
+
+
+```python
+a = np.random.random((3, 3))
+a
+```
+
+
+
+
+    array([[ 0.11422752,  0.30046885,  0.15876115],
+           [ 0.89595996,  0.47878824,  0.41827471],
+           [ 0.69593773,  0.52119338,  0.33048738]])
+
+
+
+
+```python
+a.sort()
+a
+```
+
+
+
+
+    array([[ 0.11422752,  0.15876115,  0.30046885],
+           [ 0.41827471,  0.47878824,  0.89595996],
+           [ 0.33048738,  0.52119338,  0.69593773]])
+
+
+
+
+```python
+a.sort(axis=0)
+a
+```
+
+
+
+
+    array([[ 0.11422752,  0.15876115,  0.30046885],
+           [ 0.33048738,  0.47878824,  0.69593773],
+           [ 0.41827471,  0.52119338,  0.89595996]])
+
+
+
+## Subsetting, Slicing, Indexing
+
+**Subsettings**
+
+
+```python
+a = np.random.random((3, 3))
+a
+```
+
+
+
+
+    array([[ 0.07989823,  0.4180309 ,  0.83932547],
+           [ 0.06318651,  0.20509151,  0.08262809],
+           [ 0.64938826,  0.531026  ,  0.38633983]])
+
+
+
+
+```python
+# select the element at the 2nd index
+a[2]
+```
+
+
+
+
+    array([ 0.64938826,  0.531026  ,  0.38633983])
+
+
+
+
+```python
+# select the element at row 0 column 2
+a[1][2]
+a[1, 2]
+```
+
+
+
+
+    0.08262808937797228
+
+
+
+**Slicing**
+
+
+```python
+# select items at index 0 and 1
+a[0:2]
+```
+
+
+
+
+    array([[ 0.07989823,  0.4180309 ,  0.83932547],
+           [ 0.06318651,  0.20509151,  0.08262809]])
+
+
+
+
+```python
+# select items at rớ 0 and 1 in column 1
+a[0:2, 1]
+```
+
+
+
+
+    array([ 0.4180309 ,  0.20509151])
+
+
+
+
+```python
+# select all items at row 0
+a[1, ...]
+a[1, ]
+```
+
+
+
+
+    array([ 0.06318651,  0.20509151,  0.08262809])
+
+
+
+
+```python
+# reversed array a
+a[::-1]
+```
+
+
+
+
+    array([[ 0.64938826,  0.531026  ,  0.38633983],
+           [ 0.06318651,  0.20509151,  0.08262809],
+           [ 0.07989823,  0.4180309 ,  0.83932547]])
+
+
+
+**Boolean indexing**
+
+
+```python
+# select elements from a less than 0.5
+a[a < 0.5]
+```
+
+
+
+
+    array([ 0.07989823,  0.4180309 ,  0.06318651,  0.20509151,  0.08262809,
+            0.38633983])
+
+
+
+**Fancy indexing**
+
+
+```python
+# select elements (1,0), (0,1), (1, 2) and (0,0)
+a[[1, 0, 1, 0], [0, 1, 2, 0]]
+```
+
+
+
+
+    array([ 0.06318651,  0.4180309 ,  0.08262809,  0.07989823])
+
+
+
+
+```python
+# select a subset of the matrix's rows and columns
+a[[1, 0, 1, 0]][:, [0, 1, 2, 0]]
+```
+
+
+
+
+    array([[ 0.06318651,  0.20509151,  0.08262809,  0.06318651],
+           [ 0.07989823,  0.4180309 ,  0.83932547,  0.07989823],
+           [ 0.06318651,  0.20509151,  0.08262809,  0.06318651],
+           [ 0.07989823,  0.4180309 ,  0.83932547,  0.07989823]])
+
+
+
+## Array Manipulation
+
+### Transposing Array
+
+
+```python
+a = np.random.random((2, 3))
+a
+```
+
+
+
+
+    array([[ 0.57430709,  0.64401188,  0.12761183],
+           [ 0.0726823 ,  0.7951682 ,  0.54114093]])
+
+
+
+
+```python
+# permulate array dimensions
+i = np.transpose(a)
+i
+```
+
+
+
+
+    array([[ 0.57430709,  0.0726823 ],
+           [ 0.64401188,  0.7951682 ],
+           [ 0.12761183,  0.54114093]])
+
+
+
+
+```python
+# permulate array dimensions
+i.T
+```
+
+
+
+
+    array([[ 0.57430709,  0.64401188,  0.12761183],
+           [ 0.0726823 ,  0.7951682 ,  0.54114093]])
+
+
+
+### Changing Array Shape
+
+
+```python
+# flatten the array
+a.ravel()
+```
+
+
+
+
+    array([ 0.57430709,  0.64401188,  0.12761183,  0.0726823 ,  0.7951682 ,
+            0.54114093])
+
+
+
+
+```python
+# reshape, but don't change data
+a.reshape(3, -2)
+```
+
+
+
+
+    array([[ 0.57430709,  0.64401188],
+           [ 0.12761183,  0.0726823 ],
+           [ 0.7951682 ,  0.54114093]])
+
+
+
+### Adding/Removing Elements
+
+
+```python
+# return a new array with shape (2, 6)
+a.resize(2, 3)
+a
+```
+
+
+
+
+    array([[ 0.57430709,  0.64401188,  0.12761183],
+           [ 0.0726823 ,  0.7951682 ,  0.54114093]])
+
+
+
+
+```python
+# append items to an array
+h = np.random.random((2, 3))
+print "h:", h
+g = np.random.random((2, 3))
+print "g:", g
+np.append(h, g)
+```
+
+    h: [[ 0.67964404  0.09256795  0.90630423]
+     [ 0.52906489  0.51567697  0.95132012]]
+    g: [[ 0.03126344  0.84908154  0.74228134]
+     [ 0.40333143  0.28595213  0.68416838]]
+    
+
+
+
+
+    array([ 0.67964404,  0.09256795,  0.90630423,  0.52906489,  0.51567697,
+            0.95132012,  0.03126344,  0.84908154,  0.74228134,  0.40333143,
+            0.28595213,  0.68416838])
+
+
+
+
+```python
+# insert items in an array
+a = np.random.random((1, 3))
+print "a:", a
+np.insert(a, 1, 0.5)
+```
+
+    a: [[ 0.76135438  0.30331334  0.91866363]]
+    
+
+
+
+
+    array([ 0.76135438,  0.5       ,  0.30331334,  0.91866363])
+
+
+
+
+```python
+# delete items from an array
+a = np.random.random((1, 3))
+print "a:", a
+np.delete(a, [1])
+```
+
+    a: [[ 0.1034073   0.93066432  0.49608264]]
+    
+
+
+
+
+    array([ 0.1034073 ,  0.49608264])
+
+
+
+### Combining Arrays
+
+
+```python
+# concatenate arrays
+a = np.random.random((1, 3))
+print a
+b = np.random.random((1, 3))
+print b
+np.concatenate((a, b), axis=0)
+```
+
+    [[ 0.34496986  0.59502574  0.43416152]]
+    [[ 0.98921435  0.68832237  0.44286195]]
+    
+
+
+
+
+    array([[ 0.34496986,  0.59502574,  0.43416152],
+           [ 0.98921435,  0.68832237,  0.44286195]])
+
+
+
+
+```python
+# stack arrays vertically (row-wise)
+a = np.random.random((1, 3))
+print a
+b = np.random.random((2, 3))
+print b
+np.vstack((a, b)) #  equivalent to np.r_[a, b]
+```
+
+    [[ 0.78793841  0.9923401   0.96372077]]
+    [[ 0.75537083  0.09781391  0.25327948]
+     [ 0.20607759  0.03763863  0.30818643]]
+    
+
+
+
+
+    array([[ 0.78793841,  0.9923401 ,  0.96372077],
+           [ 0.75537083,  0.09781391,  0.25327948],
+           [ 0.20607759,  0.03763863,  0.30818643]])
+
+
+
+
+```python
+# stack arrays horizontally (column-wise)
+a = np.random.random((3, 1))
+print a
+b = np.random.random((3, 2))
+print b
+np.hstack((a, b)) 
+```
+
+    [[ 0.33728008]
+     [ 0.1091688 ]
+     [ 0.68714517]]
+    [[ 0.61421635  0.49316384]
+     [ 0.19072731  0.04383904]
+     [ 0.30587218  0.28743208]]
+    
+
+
+
+
+    array([[ 0.33728008,  0.61421635,  0.49316384],
+           [ 0.1091688 ,  0.19072731,  0.04383904],
+           [ 0.68714517,  0.30587218,  0.28743208]])
+
+
+
+
+```python
+# equivalent to np.hstack
+np.column_stack((a, b))
+```
+
+
+
+
+    array([[ 0.33728008,  0.61421635,  0.49316384],
+           [ 0.1091688 ,  0.19072731,  0.04383904],
+           [ 0.68714517,  0.30587218,  0.28743208]])
+
+
+
+
+```python
+# equivalent to np.hstack
+np.c_[a, b]
+```
+
+
+
+
+    array([[ 0.33728008,  0.61421635,  0.49316384],
+           [ 0.1091688 ,  0.19072731,  0.04383904],
+           [ 0.68714517,  0.30587218,  0.28743208]])
+
+
+
+### Spliting Arrays
+
+
+```python
+a = np.random.random((3, 4))
+print a
+```
+
+    [[ 0.64277816  0.75935599  0.64927247  0.80253242]
+     [ 0.87630664  0.19748931  0.51895547  0.83645583]
+     [ 0.03132085  0.043291    0.10945252  0.31883126]]
+    
+
+
+```python
+# split the array horizontally at the 3rd index
+np.split(a, 3)
+```
+
+
+
+
+    [array([[ 0.64277816,  0.75935599,  0.64927247,  0.80253242]]),
+     array([[ 0.87630664,  0.19748931,  0.51895547,  0.83645583]]),
+     array([[ 0.03132085,  0.043291  ,  0.10945252,  0.31883126]])]
+
+
+
+
+```python
+# split the array vertically at the 3rd index
+np.vsplit(a, 3)
+```
+
+
+
+
+    [array([[ 0.64277816,  0.75935599,  0.64927247,  0.80253242]]),
+     array([[ 0.87630664,  0.19748931,  0.51895547,  0.83645583]]),
+     array([[ 0.03132085,  0.043291  ,  0.10945252,  0.31883126]])]
+
+
+
+## Suggested Readings
+
+* www.datacamp.com. Python For Data Science Cheat Sheet: Numpy Basics

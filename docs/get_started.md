@@ -1,6 +1,6 @@
-## Installation
+## Get Started 
 
-## Ubuntu
+Install essential libraries (numpy, scipy, matplotlib, pandas, scikit-learn, ipython)for data science in Ubuntu
 
 ```
 # install pip

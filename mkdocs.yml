@@ -4,11 +4,13 @@ google_analytics: ["UA-68978617-1", "magizbox.com"]
 
 pages:
 - "Home": "index.md"
-- "Installation": "installation.md"
-- "Docs":
-  - "IO": "io.md"
-  - "Preparation": "preparation.md"
+- "Get Started": "get_started.md"
+- "Latest Posts":
+  - "pandas": "pandas.md"
+  - "numpy": "numpy.md"
   - "Transformation": "transformation.md"
+  - "Preparation": "preparation.md"
+  - "IO": "io.md"
 
 markdown_extensions:
     - footnotes
