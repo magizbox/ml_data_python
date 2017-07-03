@@ -6,9 +6,9 @@ pages:
 - "Home": "index.md"
 - "Get Started": "get_started.md"
 - "Latest Posts":
-  - "Visualize": "visualize.md"
+  - "Plotting and Visualization": "visualization.md"
   - "Dataset": "dataset.md"
-  - "pandas": "pandas.md"
+  - "Data Wrangling": "pandas.md"
   - "numpy": "numpy.md"
   - "Transformation": "transformation.md"
   - "Preparation": "preparation.md"

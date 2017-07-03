@@ -6,13 +6,17 @@
 
 ## Latest Posts
 
-(03/07/2017) [**Visualize**](visualize.md)
+(03/07/2017) [**Plotting and Visualization**](visualization.md)
 
 An introduction about data visualization techniques using Matplotlib and Seaborn.
 
-(15/06/2017) [**Dataset**](dataset.md)
+(24/06/2017) [**Dataset**](dataset.md)
 
 Sample datasets to learn and practice data analytics.
+
+(15/06/2017) [**Data Wrangling: Clean, Transform, Merge, Reshape**](pandas.md)
+
+Learn about data wrangling with pandas
 
 (01/06/2017) [**Numpy cheatsheet**](numpy.md)
 
@@ -24,7 +28,7 @@ Import data to Python from numerous resources
 
 (12/11/2016) [**Transformation**](transformation.md)
 
-(12/09/2016) [**Preparation**](prepration.md)
+(12/09/2016) [**Preparation**](preparation.md)
 
 (01/02/2016) [**Get Started**](get_started.md)
 
