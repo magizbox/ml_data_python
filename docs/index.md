@@ -6,9 +6,13 @@
 
 ## Latest Posts
 
-(06/06/2017) [**Pandas Cheatsheet**](pandas.md)
+(03/07/2017) [**Visualize**](visualize.md)
 
-pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.
+An introduction about data visualization techniques using Matplotlib and Seaborn.
+
+(15/06/2017) [**Dataset**](dataset.md)
+
+Sample datasets to learn and practice data analytics.
 
 (01/06/2017) [**Numpy cheatsheet**](numpy.md)
 
