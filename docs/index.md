@@ -20,6 +20,8 @@ NumPy is a Python package to efficiently do data science. Learn to work with the
 
 (05/12/2016) [**IO**](io.md)
 
+Import data to Python from numerous resources
+
 (12/11/2016) [**Transformation**](transformation.md)
 
 (12/09/2016) [**Preparation**](prepration.md)
