@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <lastmod>2017-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/get_started/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <lastmod>2017-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,32 +20,44 @@
     
         
     <url>
+     <loc>/visualize/</loc>
+     <lastmod>2017-07-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/dataset/</loc>
+     <lastmod>2017-07-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/pandas/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <lastmod>2017-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/numpy/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <lastmod>2017-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/transformation/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <lastmod>2017-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/preparation/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <lastmod>2017-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/io/</loc>
-     <lastmod>2017-06-27</lastmod>
+     <lastmod>2017-07-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

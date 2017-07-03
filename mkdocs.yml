@@ -6,6 +6,8 @@ pages:
 - "Home": "index.md"
 - "Get Started": "get_started.md"
 - "Latest Posts":
+  - "Visualize": "visualize.md"
+  - "Dataset": "dataset.md"
   - "pandas": "pandas.md"
   - "numpy": "numpy.md"
   - "Transformation": "transformation.md"
