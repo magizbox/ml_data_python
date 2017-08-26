@@ -1,0 +1,109 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/distill.css">
+<link rel="stylesheet" href="css/font-awesome-4.5.0.css">
+<link rel="shortcut icon" href="./favicon.ico">
+<script src="js/distill_v1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.1/showdown.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/front-matter">
+  title: "Data Science with Python"
+  description: "resources and pointers to information about Data Science with Python"
+  authors:
+  - Vu Anh: http://magizbox.com/users/rain1024
+  affiliations:
+  - Magizbox: http://magizbox.com
+</script>
+
+<dt-header>
+<div class="content l-page">
+<a href="./" class="logo">
+<i class="fa fa-magic" aria-hidden="true"></i>
+Data Science with Python
+</a>
+</div>
+</dt-header>
+
+
+<dt-article class="centered">
+<h1>Data Preperation</h1>
+<dt-byline></dt-byline>
+
+<div class="markdown">
+
+## Normalization
+
+Example
+
+```python
+import numpy
+from sklearn.preprocessing import normalize
+matrix = numpy.arange(0,27,3).reshape(3,3).astype(numpy.float64)
+
+# array([[  0.,   3.,   6.],
+#   [  9.,  12.,  15.],
+#   [ 18.,  21.,  24.]])
+
+normed_matrix = normalize(matrix, axis=1, norm='l1')
+
+# [[ 0.          0.33333333  0.66666667]
+# [ 0.25        0.33333333  0.41666667]
+# [ 0.28571429  0.33333333  0.38095238]]
+```
+
+## Label Encoder
+
+Encode labels (categorical variables) with value between 0 and n_classes-1.
+
+```python
+import sklearn
+le = sklearn.preprocessing.LabelEncoder()
+le.fit(["paris", "paris", "tokyo", "amsterdam"])
+# LabelEncoder()
+list(le.classes_)
+# ['amsterdam', 'paris', 'tokyo']
+le.transform(["tokyo", "tokyo", "paris"])
+# array([2, 2, 1]...)
+list(le.inverse_transform([2, 2, 1]))
+# ['tokyo', 'tokyo', 'paris']
+```
+
+## References
+* [How to normalize a 2-dimensional numpy array in python less verbose?](http://stackoverflow.com/questions/8904694/how-to-normalize-a-2-dimensional-numpy-array-in-python-less-verbose)
+* [sklearn.preprocessing.LabelEncoder](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html)
+</div>
+</dt-article>
+
+<dt-footer>
+<div class="l-page">
+<div class="description">
+<a href="http://magizbox.com" class="logo"> <i class="fa fa-magic" aria-hidden="true"></i> magizbox</a> is dedicated to clear explanations of computer science, data science and software development.
+</div>
+<div class="nav">
+<a href="./">Data Science with Python documentation</a>
+<a href="http://magizbox.com">Magizbox</a>
+<a href="https://github.com/magizbox/deep_learning">Github</a>
+</div>
+</div>
+</dt-footer>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-68978617-1', 'magizbox.com');
+        ga('send', 'pageview');
+    </script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['\\(', '\\)'], ['$','$']]}
+});
+</script>
+
+<script src="js/markdown.js"></script>

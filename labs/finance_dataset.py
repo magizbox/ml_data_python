@@ -30,7 +30,6 @@ def load_stock_datasets():
         stocks.to_excel(data_file, index=False)
     return stocks
 
-
 import seaborn as sns
 
 # In[9]:

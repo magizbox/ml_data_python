@@ -1,0 +1,1204 @@
+## Data Wrangling
+
+Learn about data wrangling with pandas
+
+## Tiny Data
+
+A foundation for wrangling in pandas
+
+![](images/pandas_tiny_data.png)
+
+## Create DataFrames
+
+**Specify values for each column**
+
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "a": [4, 5, 6],
+    "b": [7, 8, 9],
+    "c": [10, 11, 12]
+}, index=[1, 2, 3])
+df
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>4</td>
+      <td>7</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5</td>
+      <td>8</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>9</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+**Specify values for each row**
+
+
+```python
+df = pd.DataFrame(
+    [[4, 5, 6],
+    [7, 8, 9],
+    [10, 11, 12]],
+    index=[1, 2, 3],
+    columns=["a", "b", "c"])
+df
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+**Create DataFrame with a MultiIndex**
+
+
+```python
+df = pd.DataFrame({
+  "a": [4, 5, 6],
+  "b": [7, 8, 9],
+  "c": [10, 11, 12]
+})
+index = pd.MultiIndex.from_tuples(
+  [('d', 1), ('d', 2), ('e', 2)],
+  names=['n','v'])
+df
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4</td>
+      <td>7</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5</td>
+      <td>8</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6</td>
+      <td>9</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+## Reshaping Data
+
+### melt
+
+“Unpivots” a DataFrame from wide format to long format, optionally leaving identifier variables set.
+
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "a": [4, 5],
+    "b": [7, 8],
+    "c": [10, 11]
+})
+df
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4</td>
+      <td>7</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5</td>
+      <td>8</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+pd.melt(df)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>variable</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>a</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>b</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>b</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>c</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>c</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+### pivot
+
+Reshape data (produce a “pivot” table) based on column values. Uses unique values from index / columns to form axes of the resulting DataFrame.
+
+
+```python
+df = pd.DataFrame({'foo': ['one','one','one','two','two','two'],
+                       'bar': ['A', 'B', 'C', 'A', 'B', 'C'],
+                       'baz': [1, 2, 3, 4, 5, 6]})
+df
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bar</th>
+      <th>baz</th>
+      <th>foo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>1</td>
+      <td>one</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>2</td>
+      <td>one</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>3</td>
+      <td>one</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>4</td>
+      <td>two</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B</td>
+      <td>5</td>
+      <td>two</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C</td>
+      <td>6</td>
+      <td>two</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df.pivot(index='foo', columns='bar', values='baz')
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>bar</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+    </tr>
+    <tr>
+      <th>foo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>one</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>two</th>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df.pivot(index='foo', columns='bar')['baz']
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>bar</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+    </tr>
+    <tr>
+      <th>foo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>one</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>two</th>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+### concat
+
+Append rows of DataFrames
+
+
+```python
+df1 = pd.DataFrame([['a', 1], ['b', 2]],
+               columns=['letter', 'number'])
+df1
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>letter</th>
+      <th>number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df2 = pd.DataFrame([['c', 3], ['d', 4]],
+                  columns=['letter', 'number'])
+```
+
+
+```python
+pd.concat([df1, df2])
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>letter</th>
+      <th>number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>c</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>d</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Append columns of DataFrames
+
+
+```python
+df1 = pd.DataFrame([['a', 1], ['b', 2]],
+                  columns=['letter', 'number'])
+df1
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>letter</th>
+      <th>number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df2 = pd.DataFrame([['bird', 'polly'], ['monkey', 'george']],
+                   columns=['animal', 'name'])
+df2
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>animal</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>bird</td>
+      <td>polly</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>monkey</td>
+      <td>george</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+pd.concat([df1, df2], axis=1)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>letter</th>
+      <th>number</th>
+      <th>animal</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>1</td>
+      <td>bird</td>
+      <td>polly</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>2</td>
+      <td>monkey</td>
+      <td>george</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+### sort
+
+
+```python
+df = pd.DataFrame([['a', 10, 1], ['b', 10, 5], ['c', 30, 3]],
+                  columns=['name', 'age', 'score'])
+df
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>c</td>
+      <td>30</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+order rows by values of a column (low to high)
+
+
+```python
+df.sort_values('age')
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>c</td>
+      <td>30</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+order rows by values of a column (high to low)
+
+
+```python
+df.sort_values('age', ascending=False)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>c</td>
+      <td>30</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+order rows by values of two column
+
+
+```python
+df.sort_values(['age', 'score'], ascending=[False, False])
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>c</td>
+      <td>30</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+sort the index of a DataFrame
+
+
+```python
+df.sort_index()
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>c</td>
+      <td>30</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Reset index of DataFrame to row numbers, moving index to columns
+
+
+```python
+df.reset_index()
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>name</th>
+      <th>age</th>
+      <th>score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>a</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>b</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>c</td>
+      <td>30</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+### drop
+
+drop columns from DataFrame
+
+
+```python
+df.drop(['age', 'score'], axis=1)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>a</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>c</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+

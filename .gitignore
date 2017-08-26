@@ -8,7 +8,6 @@
 
 # User-specific stuff:
 .idea/
-.idea/workspace.xml
 .idea/tasks.xml
 .idea/dictionaries
 .idea/vcs.xml
@@ -62,7 +61,6 @@ __pycache__/
 env/
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -137,3 +135,5 @@ ENV/
 
 # Rope project settings
 .ropeproject
+!/docs/components/jquery/dist/
+!/bower_components/jquery/dist/
